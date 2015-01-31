@@ -1,0 +1,15 @@
+[latexmk -pdf 'nomefile']
+
+Misure dirette
+RV=11.17 +/- 0.13 mOHM
+
+RA(200microA)=1002 +/- 5 OHM
+RA(2mA)=102.1 +/- 0.5
+RA(20mA)=11.4+/-0.6
+RA(200mA)=1.8+/-0.6
+RA(2A)=1.2+/-0.6
+
+Misure ricavate
+
+
+

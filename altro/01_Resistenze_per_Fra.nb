@@ -1,0 +1,365 @@
+RESISTENZE SINGOLE : MISURA DIRETTA
+In[63]:= Array[res,6]
+Array[std,6]
+Out[63]= {67.8,67.9,560.6,1895,149.8,252.}
+Out[64]= {0.116,0.116,0.116,0.58,0.116,0.116(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     11341,        360]
+NotebookOptionsPosition[     10675,        336]
+NotebookOutlinePosition[     11012,        351]
+CellTagsIndexPosition[     10969,        348]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell["RESISTENZE SINGOLE : MISURA DIRETTA", "Input",
+ CellChangeTimes->{{3.6317024333755827`*^9, 3.6317024383424664`*^9}},
+ FormatType->"TextForm"],
+
+Cell[BoxData[{
+ RowBox[{"Array", "[", 
+  RowBox[{"res", ",", "6"}], "]"}], "\n", 
+ RowBox[{"Array", "[", 
+  RowBox[{"std", ",", "6"}], "]"}]}], "Input",
+ CellChangeTimes->{{3.631702456940448*^9, 3.6317024569553013`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", " ", 
+   RowBox[{"\[CapitalDelta]X", "=", 
+    RowBox[{
+     RowBox[{"Err", "%"}], "+", "Err_digit"}]}], " ", "*)"}], "\n", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"EP", "[", 
+     RowBox[{"R_", ",", "\[CapitalDelta]P_"}], "]"}], ":=", 
+    RowBox[{"R", "*", "\[CapitalDelta]P"}]}], "\n", 
+   RowBox[{
+    RowBox[{"ED", "[", 
+     RowBox[{"numdigit_", ",", "minfs_"}], "]"}], ":=", 
+    RowBox[{"numdigit", "*", "minfs"}]}], "\n", 
+   RowBox[{
+    RowBox[{"STD", "[", 
+     RowBox[{"EP_", ",", "ED_"}], "]"}], ":=", 
+    RowBox[{"Sqrt", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{"0.58", "*", "ED"}], ")"}], "^", "2"}], "+", 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{"0.58", "*", "EP"}], ")"}], "^", "2"}]}], 
+     "]"}]}]}]}]], "Input",
+ CellChangeTimes->{{3.631702479934784*^9, 3.631702479947197*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", "R1", "*)"}], "\n", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"res", "[", "1", "]"}], "=", 
+    RowBox[{"R", "=", "67.8"}]}], "\n", 
+   RowBox[{"(*", 
+    RowBox[{"fs", "=", 
+     RowBox[{"600", " ", "ohm"}]}], "*)"}], " ", 
+   RowBox[{
+    RowBox[{"numdigit", "=", "2"}], ";", " ", 
+    RowBox[{"minfs", "=", "0.1"}], ";"}], "\n", 
+   RowBox[{
+    RowBox[{"\[CapitalDelta]P", "=", 
+     RowBox[{"0.9", "/", "100"}]}], ";"}], "\n", 
+   RowBox[{
+    RowBox[{"std", "[", "1", "]"}], "=", 
+    RowBox[{
+     RowBox[{"ED", "[", 
+      RowBox[{"numdigit", ",", "minfs"}], "]"}], "*", "0.58"}]}], "\n", 
+   RowBox[{"ERR", "=", 
+    RowBox[{"STD", "[", 
+     RowBox[{
+      RowBox[{"EP", "[", 
+       RowBox[{"R", ",", "\[CapitalDelta]P"}], "]"}], ",", 
+      RowBox[{"ED", "[", 
+       RowBox[{"numdigit", ",", "minfs"}], "]"}]}], "]"}]}], "\n", 
+   RowBox[{"PERCERR", "=", 
+    RowBox[{"ERR", "/", "R"}]}]}]}]], "Input",
+ CellChangeTimes->{{3.6317024944816303`*^9, 3.6317024944979*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", "R2", "*)"}], "\n", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"res", "[", "2", "]"}], "=", 
+    RowBox[{"R", "=", "67.9"}]}], "\n", 
+   RowBox[{"(*", 
+    RowBox[{"fs", "=", 
+     RowBox[{"600", " ", "ohm"}]}], "*)"}], " ", 
+   RowBox[{
+    RowBox[{"numdigit", "=", "2"}], ";", " ", 
+    RowBox[{"minfs", "=", "0.1"}], ";"}], "\n", 
+   RowBox[{
+    RowBox[{"\[CapitalDelta]P", "=", 
+     RowBox[{"0.9", "/", "100"}]}], ";"}], "\n", 
+   RowBox[{
+    RowBox[{"std", "[", "2", "]"}], "=", 
+    RowBox[{
+     RowBox[{"ED", "[", 
+      RowBox[{"numdigit", ",", "minfs"}], "]"}], "*", "0.58"}]}], "\n", 
+   RowBox[{"ERR", "=", 
+    RowBox[{"STD", "[", 
+     RowBox[{
+      RowBox[{"EP", "[", 
+       RowBox[{"R", ",", "\[CapitalDelta]P"}], "]"}], ",", 
+      RowBox[{"ED", "[", 
+       RowBox[{"numdigit", ",", "minfs"}], "]"}]}], "]"}]}], "\n", 
+   RowBox[{"PERCERR", "=", 
+    RowBox[{"ERR", "/", "R"}]}]}]}]], "Input",
+ CellChangeTimes->{{3.6317025095412893`*^9, 3.631702509554358*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", "R3", "*)"}], "\n", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"res", "[", "3", "]"}], "=", 
+    RowBox[{"R", "=", "560.6"}]}], "\n", 
+   RowBox[{"(*", 
+    RowBox[{"fs", "=", 
+     RowBox[{"600", " ", "ohm"}]}], "*)"}], " ", 
+   RowBox[{
+    RowBox[{"numdigit", "=", "2"}], ";", " ", 
+    RowBox[{"minfs", "=", "0.1"}], ";"}], "\n", 
+   RowBox[{
+    RowBox[{"\[CapitalDelta]P", "=", 
+     RowBox[{"0.9", "/", "100"}]}], ";"}], "\n", 
+   RowBox[{
+    RowBox[{"std", "[", "3", "]"}], "=", 
+    RowBox[{
+     RowBox[{"ED", "[", 
+      RowBox[{"numdigit", ",", "minfs"}], "]"}], "*", "0.58"}]}], "\n", 
+   RowBox[{"ERR", "=", 
+    RowBox[{"STD", "[", 
+     RowBox[{
+      RowBox[{"EP", "[", 
+       RowBox[{"R", ",", "\[CapitalDelta]P"}], "]"}], ",", 
+      RowBox[{"ED", "[", 
+       RowBox[{"numdigit", ",", "minfs"}], "]"}]}], "]"}]}], "\n", 
+   RowBox[{"PERCERR", "=", 
+    RowBox[{"ERR", "/", "R"}]}]}]}]], "Input",
+ CellChangeTimes->{{3.631702520317753*^9, 3.6317025203323593`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", "R4", "*)"}], "\n", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"res", "[", "4", "]"}], "=", 
+    RowBox[{"R", "=", "1895"}]}], "\n", 
+   RowBox[{"(*", 
+    RowBox[{"fs", "=", 
+     RowBox[{"6000", " ", "ohm"}]}], "*)"}], " ", 
+   RowBox[{
+    RowBox[{"numdigit", "=", "1"}], ";", " ", 
+    RowBox[{"minfs", "=", "1"}], ";"}], "\n", 
+   RowBox[{
+    RowBox[{"\[CapitalDelta]P", "=", 
+     RowBox[{"0.9", "/", "100"}]}], ";"}], "\n", 
+   RowBox[{
+    RowBox[{"std", "[", "4", "]"}], "=", 
+    RowBox[{
+     RowBox[{"ED", "[", 
+      RowBox[{"numdigit", ",", "minfs"}], "]"}], "*", "0.58"}]}], "\n", 
+   RowBox[{"ERR", "=", 
+    RowBox[{"STD", "[", 
+     RowBox[{
+      RowBox[{"EP", "[", 
+       RowBox[{"R", ",", "\[CapitalDelta]P"}], "]"}], ",", 
+      RowBox[{"ED", "[", 
+       RowBox[{"numdigit", ",", "minfs"}], "]"}]}], "]"}]}], "\n", 
+   RowBox[{"PERCERR", "=", 
+    RowBox[{"ERR", "/", "R"}]}]}]}]], "Input",
+ CellChangeTimes->{{3.63170253394702*^9, 3.6317025339574327`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", "R5", "*)"}], "\n", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"res", "[", "5", "]"}], "=", 
+    RowBox[{"R", "=", "149.8"}]}], "\n", 
+   RowBox[{"(*", 
+    RowBox[{"fs", "=", 
+     RowBox[{"600", " ", "ohm"}]}], "*)"}], " ", 
+   RowBox[{
+    RowBox[{"numdigit", "=", "2"}], ";", " ", 
+    RowBox[{"minfs", "=", "0.1"}], ";"}], "\n", 
+   RowBox[{
+    RowBox[{"\[CapitalDelta]P", "=", 
+     RowBox[{"0.9", "/", "100"}]}], ";"}], "\n", 
+   RowBox[{
+    RowBox[{"std", "[", "5", "]"}], "=", 
+    RowBox[{
+     RowBox[{"ED", "[", 
+      RowBox[{"numdigit", ",", "minfs"}], "]"}], "*", "0.58"}]}], "\n", 
+   RowBox[{"ERR", "=", 
+    RowBox[{"STD", "[", 
+     RowBox[{
+      RowBox[{"EP", "[", 
+       RowBox[{"R", ",", "\[CapitalDelta]P"}], "]"}], ",", 
+      RowBox[{"ED", "[", 
+       RowBox[{"numdigit", ",", "minfs"}], "]"}]}], "]"}]}], "\n", 
+   RowBox[{"PERCERR", "=", 
+    RowBox[{"ERR", "/", "R"}]}]}]}]], "Input",
+ CellChangeTimes->{{3.631702545925264*^9, 3.6317025459425793`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", "R6", "*)"}], "\n", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"res", "[", "6", "]"}], "=", 
+    RowBox[{"R", "=", "252.0"}]}], "\n", 
+   RowBox[{"(*", 
+    RowBox[{"fs", "=", 
+     RowBox[{"600", " ", "ohm"}]}], "*)"}], " ", 
+   RowBox[{
+    RowBox[{"numdigit", "=", "2"}], ";", " ", 
+    RowBox[{"minfs", "=", "0.1"}], ";"}], "\n", 
+   RowBox[{
+    RowBox[{"\[CapitalDelta]P", "=", 
+     RowBox[{"0.9", "/", "100"}]}], ";"}], "\n", 
+   RowBox[{
+    RowBox[{"std", "[", "6", "]"}], "=", 
+    RowBox[{
+     RowBox[{"ED", "[", 
+      RowBox[{"numdigit", ",", "minfs"}], "]"}], "*", "0.58"}]}], "\n", 
+   RowBox[{"ERR", "=", 
+    RowBox[{"STD", "[", 
+     RowBox[{
+      RowBox[{"EP", "[", 
+       RowBox[{"R", ",", "\[CapitalDelta]P"}], "]"}], ",", 
+      RowBox[{"ED", "[", 
+       RowBox[{"numdigit", ",", "minfs"}], "]"}]}], "]"}]}], "\n", 
+   RowBox[{"PERCERR", "=", 
+    RowBox[{"ERR", "/", "R"}]}]}]}]], "Input",
+ CellChangeTimes->{{3.631702552621565*^9, 3.631702552634884*^9}}],
+
+Cell["RESISTENZE IN SERIE E PARALLELO : CORRELAZIONE", "Input",
+ CellChangeTimes->{{3.6317025661935577`*^9, 3.631702572487502*^9}},
+ FormatType->"TextForm"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"sk", "=", 
+   RowBox[{"0.58", "*", 
+    RowBox[{"0.9", "/", "100"}]}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"STDserie", "[", 
+   RowBox[{"R1_", ",", "R2_", ",", "sk_", ",", "s1_", ",", "s2_"}], "]"}], ":=", 
+  RowBox[{"Sqrt", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{"R1", "+", "R2"}], ")"}], "^", "2"}], "*", 
+     RowBox[{"sk", "^", "2"}]}], "+", 
+    RowBox[{"s1", "^", "2"}], "+", 
+    RowBox[{"s2", "^", "2"}]}], "]"}]}], "\n", 
+ RowBox[{
+  RowBox[{"res", "[", "5", "]"}], "+", 
+  RowBox[{"res", "[", "6", "]"}]}], "\n", 
+ RowBox[{
+  RowBox[{"STDserie", "[", 
+   RowBox[{
+    RowBox[{"res", "[", "5", "]"}], ",", 
+    RowBox[{"res", "[", "6", "]"}], ",", "sk", ",", 
+    RowBox[{"std", "[", "5", "]"}], ",", 
+    RowBox[{"std", "[", "6", "]"}]}], "]"}], "\n", 
+  RowBox[{"(*", 
+   RowBox[{"misure", " ", "dirette", " ", "della", " ", "RS"}], 
+   "*)"}]}], "\n", 
+ RowBox[{"RS", "=", "401.7"}], "\n", 
+ RowBox[{
+  RowBox[{"numdigit", "=", "2"}], ";", " ", 
+  RowBox[{"minfs", "=", "0.1"}], ";", " ", 
+  RowBox[{"(*", 
+   RowBox[{"fs", "=", "600"}], "*)"}], " ", "\n", 
+  RowBox[{"\[CapitalDelta]P", "=", 
+   RowBox[{"0.9", "/", "100"}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"sRS", "=", 
+   RowBox[{"STD", "[", 
+    RowBox[{
+     RowBox[{"EP", "[", 
+      RowBox[{"RS", ",", "\[CapitalDelta]P"}], "]"}], ",", 
+     RowBox[{"ED", "[", 
+      RowBox[{"numdigit", ",", "minfs"}], "]"}]}], "]"}]}], "\n", 
+  RowBox[{"(*", 
+   RowBox[{"verifica", " ", "di", " ", 
+    RowBox[{"compatibilita", "'"}]}], "*)"}]}], "\n", 
+ RowBox[{"\[CapitalDelta]R", "=", 
+  RowBox[{"-", 
+   RowBox[{"(", 
+    RowBox[{"RS", "-", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"res", "[", "5", "]"}], "+", 
+       RowBox[{"res", "[", "6", "]"}]}], ")"}]}], ")"}]}]}], "\n", 
+ RowBox[{
+  RowBox[{"Subscript", "[", 
+   RowBox[{"\[Sigma]", ",", " ", "\[CapitalDelta]R"}], "]"}], "=", 
+  RowBox[{"Sqrt", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"\[CapitalDelta]R", "^", "2"}], "*", 
+     RowBox[{"sk", "^", "2"}]}], "+", 
+    RowBox[{"3", "*", 
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{"ED", "[", 
+        RowBox[{"numdigit", ",", "minfs"}], "]"}], ")"}], "^", "2"}]}]}], 
+   "]"}]}], "\n", 
+ RowBox[{"\[Lambda]", "=", 
+  RowBox[{"\[CapitalDelta]R", "/", 
+   RowBox[{"Subscript", "[", 
+    RowBox[{"\[Sigma]", ",", " ", "\[CapitalDelta]R"}], "]"}]}]}]}], "Input",
+ CellChangeTimes->{{3.6317025879136467`*^9, 3.631702587930265*^9}}],
+
+Cell["", "Input",
+ CellChangeTimes->{{3.6317024317534523`*^9, 3.6317025903390913`*^9}}]
+},
+WindowSize->{1366, 744},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+FrontEndVersion->"10.0 for Linux x86 (64-bit) (September 9, 2014)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 147, 2, 32, "Input"],
+Cell[708, 24, 220, 5, 55, "Input"],
+Cell[931, 31, 879, 27, 99, "Input"],
+Cell[1813, 60, 1015, 30, 165, "Input"],
+Cell[2831, 92, 1017, 30, 165, "Input"],
+Cell[3851, 124, 1018, 30, 165, "Input"],
+Cell[4872, 156, 1015, 30, 165, "Input"],
+Cell[5890, 188, 1018, 30, 165, "Input"],
+Cell[6911, 220, 1016, 30, 165, "Input"],
+Cell[7930, 252, 156, 2, 32, "Input"],
+Cell[8089, 256, 2492, 75, 297, "Input"],
+Cell[10584, 333, 87, 1, 32, "Input"]
+}
+]
+*)
+

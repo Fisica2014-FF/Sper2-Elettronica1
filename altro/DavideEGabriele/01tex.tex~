@@ -1,0 +1,42 @@
+\documentclass{article}
+
+\usepackage{mathtools}
+\usepackage{tabulary}
+\usepackage{booktabs}
+
+\begin{document}
+\paragraph{Metodologia di misura} \hfill
+La prima parte dell'esperimento \`e consistita nell'ottenimento di un fascio luminoso uscente dalla lente approssimativamente parallelo: prendendo a varie distanze dal cavaliere portalampada del cavaliere portaschermo la larghezza del fascio (grazie alla griglia centimetrica su di esso, senza utilizzare il micrometro in questa fase), si e' determinata la distanza del cavaliere portalentelente approssimativamente uguale alla distanza focale.
+Una volta fissata la lente, si sono scelte due distanze dello schermo (da vicino, 20\(\cm\); da lontano, 130\(\cm\)) a cui, questa volta con precisione micrometrica, si \`e misurata la larghezza del fascio variando la distanza della lente con scala micrometrica. Al proposito, per scegliere le distanze cui misurare, si \`e creato uno script in grado di fornire un plot delle misure in tempo reale, cos\`i da sapere se ci si stesse avvicinando o allontanando dal punto cercato. 
+
+Riguardo ai valori lente, si \`e tenuto conto del fatto che fossero da considerare a meno di un valore di azzeramento $\mu _0 = 8.60 mm).
+Riguardo all'utilizzo del micrometro dello schermo, si \`e registrata la differenza tra i valori segnati dalla scala, con una precisione di \(\frac{1}{1000} \cm\).
+
+%**01_tab_1.tx**
+
+\paragraph{Analisi dei dati} \hfill
+Per la stima della posizione del fuoco e il calcolo degli errori, si considera la seguente formula:
+\[ f = P_L - P_0 + (\mu _0 - \mu ^{\star}) + \frac{\mathrm{d}r}{2} - \frac{PP'}{2}.\]
+\( \mu ^{\star} \) \`e individuato dall'int delle due rette interpolanti precedentemente calcolate:
+\[ \mu ^{\star} = x_{intersezione} = \frac{a - a'}{b' - b} = F(a, a', b, b'), \]
+da cui, grazie alla formula di propagazione degli errori, si ottiene, considerando (a, b), (a', b') rispettivamente correlati e le rette tra loro indipendenti,
+\[ Var[F(a, a', b, b')] = (\frac{\partial F}{\partial a}|_{x_{int}})^2 \cdot Var(a) + 
+(\frac{\partial F}{\partial a'}|_{x_{int}})^2 \cdot Var(a') + \hfill
+(\frac{\partial F}{\partial b}|_{x_{int}})^2 \cdot Var(b) + 
+(\frac{\partial F}{\partial b'}|_{x_{int}})^2 \cdot Var(b) + \hfill
+2(\frac{\partial F}{\partial a}|_{x_{int}})(\frac{\partial F}{\partial b}|_{x_{int}}) \cdot Cov(a, b) +
+2(\frac{\partial F}{\partial a'}|_{x_{int}})(\frac{\partial F}{\partial b'}|_{x_{int}})^2 \cdot Cov (a', b'), \]
+che, sotto radice quadrata, d\`a l'errore per \( \mu ^{\star} \), considerandolo distribuito normalmente.
+Svolgendo i calcoli, si trova
+\[ Var[F(a, a', b, b')] = (\frac{1}{b'- b}|_{x_{int}})^2 \cdot (Var(a) + Var(a')) + (\frac{a - a'}{(b' - b)^2}|_{x_{int}})^2 (Var(b) + Var(b')) + 
+2 (\frac{1}{b'- b}|_{x_{int}}) (\frac{a - a'}{(b' - b)^2}|_{x_{int}}) (Cov(a, b) + Cov(a', b') . \]
+Calcoliamo le covarianze:
+\[ Cov(a, b) = -\frac{\sum_{i} x_i}{\Delta}\sigma_y^2 \]
+e vale lo stesso per a' e b', con le adeguate (x, y).
+
+
+
+ 
+
+
+\end{document}

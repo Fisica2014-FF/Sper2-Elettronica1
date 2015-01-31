@@ -1,0 +1,6 @@
+\begin{grafico} \centering \input{../gnuplot/immagini/02_graph_1.tex} \caption{Grafico 02_graph_1.tex} \label{gr:02_graph_1.tex} \end{grafico}
+
+\begin{grafico} \centering \input{../gnuplot/immagini/01_graph_1.tex} \caption{Interpolazione lineare} \label{gr:01_graph_1.tex} \end{grafico}
+
+
+\begin{grafico} \centering \input{../gnuplot/immagini/01_graph_2.tex} \caption{Incertezza sulle rette} \label{gr:01_graph_2.tex} \end{grafico}

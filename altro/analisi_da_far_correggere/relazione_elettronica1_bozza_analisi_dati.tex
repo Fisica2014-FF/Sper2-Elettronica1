@@ -1,0 +1,71 @@
+\documentclass[11pt,a4paper]{article} % Prepara un documento con un font grande
+
+\usepackage{iftex}
+
+\ifLuaTeX
+  \input{./preamboli_e_stili/pacchetti_luatex.tex}
+\else
+  \input{./preamboli_e_stili/pacchetti.tex}
+\fi
+\DeclareGraphicsExtensions{.pdf, .png, .jpg} % Se due immagini hanno lo stesso nome sceglile secondo l'ordine di filetype qui
+\graphicspath{ {./img/} }					 % Path delle immagini 
+
+\title{
+\vspace{-2cm}
+\fontsize{36pt}{10pt}\selectfont
+RELAZIONE DI \\[8mm] ELETTRONICA \\[12mm]
+Bozza di analisi dati
+}
+% \title{}
+\author{
+\large
+\textsc{Francesco Forcher}\\[2mm]
+\normalsize Università di Padova, Facoltà di Fisica\\
+\normalsize francesco.forcher@studenti.unipd.it\\
+\normalsize Matricola: \texttt{1073458}\\
+\and
+\large
+\textsc{Davide Chiappara}\\[2mm]
+\normalsize Università di Padova, Facoltà di Fisica\\
+\normalsize davide.chiappara@studenti.unipd.it\\
+\normalsize Matricola: \texttt{1070160}\\
+\and
+\large
+\textsc{Gabriele Labanca}\\[2mm]
+\normalsize Università di Padova, Facoltà di Fisica\\
+\normalsize gabriele.labanca@studenti.unipd.it\\
+\normalsize Matricola: \texttt{1069556}
+}
+\date{\today}
+
+\input{./preamboli_e_stili/stili_float.tex}
+
+
+%////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+%////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+% Fine dei dati iniziali per il latex: il documento finale inizierà da qui
+\begin{document}
+{
+\maketitle % Produce il titolo a partire dai comandi \title, \author e \date
+
+\section{Misure dirette di resistenze}
+
+\section{Misura voltamperometrica di una resistenza}
+
+\begin{grafico}
+\centering
+\includegraphics[width=\textwidth]{02_fitlin}
+\caption{Fit lineare}
+\label{fig:fitlin}
+\end{grafico}
+
+\begin{grafico}
+\centering
+\includegraphics[width=\textwidth]{02_residui}
+\caption{Residui}
+\label{fig:residui}
+\end{grafico}
+
+\section{Resistenze interne degli strumenti di misura}
+
+\end{document}

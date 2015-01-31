@@ -1,0 +1,27 @@
+%**01_tab_1.tx**
+
+Per la stima della posizione del fuoco e il calcolo degli errori, si considera la seguente formula:
+\[ f = P_L - P_0 + (\mu _0 - \mu ^{\star}) + \frac{\mathrm{d}r}{2} - \frac{PP'}{2}.\]
+\( \mu ^{\star} \) \`e individuato dall'intersezione delle due rette interpolanti precedentemente calcolate:
+\[ \mu ^{\star} = x_{intersezione} = \frac{a - a'}{b' - b} = F(a, a', b, b'), \]
+da cui, grazie alla formula di propagazione degli errori, si ottiene, considerando $(a, b)$, $(a', b')$ rispettivamente correlati e le rette tra loro indipendenti,
+\[ Var[F(a, a', b, b')] = (\frac{\partial F}{\partial a}|_{x_{int}})^2 \cdot Var(a) + 
+(\frac{\partial F}{\partial a'}|_{x_{int}})^2 \cdot Var(a') + \hfill
+(\frac{\partial F}{\partial b}|_{x_{int}})^2 \cdot Var(b) + 
+(\frac{\partial F}{\partial b'}|_{x_{int}})^2 \cdot Var(b) + \hfill
+2(\frac{\partial F}{\partial a}|_{x_{int}})(\frac{\partial F}{\partial b}|_{x_{int}}) \cdot Cov(a, b) +
+2(\frac{\partial F}{\partial a'}|_{x_{int}})(\frac{\partial F}{\partial b'}|_{x_{int}})^2 \cdot Cov (a', b'), \]
+che, sotto radice quadrata, d\`a l'incertezza per \( \mu ^{\star} \), considerandolo distribuito normalmente.
+Svolgendo i calcoli, si trova
+\[ Var[F(a, a', b, b')] = (\frac{1}{b'- b}|_{x_{int}})^2 \cdot (Var(a) + Var(a')) + (\frac{a - a'}{(b' - b)^2}|_{x_{int}})^2 (Var(b) + Var(b')) + 
+2 (\frac{1}{b'- b}|_{x_{int}}) (\frac{a - a'}{(b' - b)^2}|_{x_{int}}) (Cov(a, b) + Cov(a', b') . \]
+Calcoliamo le covarianze:
+\[ Cov(a, b) = -\frac{\sum_{i} x_i}{\Delta}\sigma_y^2, \]
+dove $\Delta$ \`e il parametro di interpolazione lineare; vale lo stesso per a' e b', con le adeguate (x, y).
+
+Si trova per il fuoco il valore 
+\[ f=(7.14437 \pm 0.7) \cm ; \] 
+si \`e considerata trascurabile l'incertezza su $\mu*$ rispetto a quello fornito dal laboratorio su $P_L$ e $P_0$, pari a $\sigma _P = 0.05 \cm$: ci\`o porta propagando a un'incertezza di $\sqrt{2} \cdot \sigma_P = 0.07 \cm$. Tale stima va considerata a meno della correzione di aberrazione sferica, che verr\`a compiuta sulla miglior stima del valore di \( f \).
+
+%1)Io mi dilungherei personalmente un pochino di più sulla questione dell'errore, ho capito che è calato dall'alto, però ne parlerei con un po' più precisione: intendo, io direi qualcosa del tipo "L'incertezza è presa di 0.7 perché a causa dei ritardi delle componenti meccaniche e degli errori di lettura è stato precedentemente verificato che il valore della posizione di ogni cavaliere ha un'incertezza di 0.05 cm -tra l'altro Gabriele, c'è uno zero che mi manca qui-, per cui l'incertezza -Non usare errore, nella prima lezione che abbiamo fatto con lui ha fatto un discorso su come gli erorri siano una cosa, mentre quello che stima un fisico è un'incertezza- è data dalla somma quadratica di tutte le incertezze presenti nella formula, ma da un'occhiata rapida risulta evidente come tutte le incertezze sono effettivamente trascurabili rispetto a quelle su $P_L$ e $P_o$, per cui l'incertezza si riduce a $\radq{2} \cdot \sigma_{posizionamento} = 0.07 \cm$". Tra l'altro tu ti sei calcolato mustar e hai suato muzero senza scriverli da nessuna parte. almeno una righetta dopo il grafico con scritto il valore ce la metterei sinceramente---Davide
+%CORR1: Per quanto riguarda l'err... l'incertezza sono stato piu' preciso. Per la spiegazione di mustar si veda all'inizio del doc, per muzero effettivamente va inserito, lo metterei nella metodologia di misura. Inserisco anche l'errore su muzero e mustar.

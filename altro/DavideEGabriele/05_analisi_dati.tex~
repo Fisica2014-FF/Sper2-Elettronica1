@@ -1,0 +1,15 @@
+%**05_tab_1**
+
+Per la stima del numero di Abbe $V$ si \`e utilizzata la formula
+\[ V=\frac{f}{A} ,\]
+dove \(A= f_C - f_F\) e $f$ \`e la miglior stima del fuoco nel giallo dalle precedenti esperienze. %Fuoco nel giallo --Davide
+Per la stima di A, si \`e utilizzata una media semplice sul campione ${A_i}$ creato a partire dai dati:
+\[ A = (0.113 \pm 0.005) \cm .\]
+Considerando invece il campione di \( V_i=\frac{f}{A_i} \), la propagazione degli errori porta a 
+\[ Var(V_i) = \frac{
+\frac{2f^2 \cdot s^2}{A_i^2} \cdot \sigma^2 + Var(f)
+}{A_i^2} \]
+e la media pesata restituisce la nostra stima:
+\[V= 58 \pm 1 .\]
+
+%Media pesata di V = 58.0025, con sigma = 1.25249

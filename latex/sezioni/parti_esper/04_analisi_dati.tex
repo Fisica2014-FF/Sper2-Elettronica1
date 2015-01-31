@@ -1,0 +1,50 @@
+%**04_tab_1.tex**
+
+I risultati delle misure sono riportati nelle prime colonne della \autoref{tab:04_tab_1.tex}.
+\begin{tabella}
+	\centering
+	\input{./tabelle/04_tab_1.tex}
+	\caption{Aberrazione sferica, $[\mm\,]$ tranne le ultime due colonne adimensionali}
+	\label{tab:04_tab_1.tex}
+\end{tabella}
+%
+Per la stima del coefficiente di aberrazione sferica $c$, si \`e considerata la formula
+\[ c=\frac{f   l}{R^2}, \] 
+con \( l = f_p - f_m = \frac{f_i + f_f}{2} - f_m \) e $f$ miglior stima del fuoco nel giallo dalle precedenti esperienze.
+
+
+Per trovare $l$ si \`e calcolato $l_i$ su ogni terna di valori, propagandone l'errore quadraticamente. Nel calcolo della propagazione si \`e notato che l'incertezza su $f_m$ è trascurabile rispetto a quella su $f_p$: infatti risulta da evidenze sperimentali che la profondità di campo dei raggi prossimali all'asse ottico \`e molto maggiore di quella dei raggi marginali; è stato più semplice comprendere la posizione del fuoco marginale rispetto a quella del fuoco prossimale, per identificare il quale è stato necessario trovare i due valori all'interno del quale il fuoco fosse compreso. Al fuoco prossimale è stata associata, quindi, un'incertezza pari alla semiampiezza dell'intervallo di fuoco dei raggi prossimali, proprio in conseguenza delle difficolt\`a già espresse. Si \`e in seguito fornita una stima di $l$ come media pesata del campione cos\`i creato:
+\[ l = (0.51 \pm 0.03) \cm. \]
+
+
+Per la correzione di aberrazione sferica sulle stime $f^{\star}_j$ ottenute dalle precedenti esperienze, \`e necessario il valore $ l'$, definito come la distanza tra i punti di messa a fuoco rispettivamente dei raggi prossimali all'asse ottico e di quelli al margine del fascio, nel caso del diaframma a foro singolo (diametro $d_0=1.00 cm$). Per trovare tale valore si utilizza la definizione di aberrazione sferica longitudinale $l'=\frac{c(d/2)^2}{f}$: a partire dai dati dell'esperienza illustrata nella \autoref{subsec:autocollimazione}, si \`e trovata l'ordinata dell'intersezione tra le due rette, corrispondente al diametro del fascio creato, $d= 1.182 \cm$ (non si \`e ricercata l'incertezza di tale valore, in quanto la correzione per aberrazione sferica prevede l'utilizzo esclusivamente del valore di $l'$, ma non dell'incertezza associata). Risolvendo il sistema tra la formula sopra detta e $l=\frac{cR^2}{f}$, si ottiene
+\[l' = l\left(\frac{d}{2R}\right)^2 = 0.09\cm .\]
+
+
+Con tale $l'$, si \`e compiuta una correzione di aberrazione sferica per ogni $f^{\star}_j$ ottenuto dalle precedenti esperienze, sommando $\nicefrac{l'}{2}$ alla stima stessa e andando a stimare nuovamente la sua incertezza. Infatti i risultati presentati nel caso delle prime tre esperienze trovano il fuoco della lente a meno delle correzioni per aberrazione sferica: a causa della costruzione dell'apparato, l'oggetto non è effettivamente puntiforme, ma ha un diametro finito $d$ a causa del diaframma. Ciò vuol dire che, analogamente a quanto è stato notato nell'esecuzione dell'esperimento IV, i raggi che incidono la lente a distanza maggiore dal centro della stessa convergono prima degli altri. A causa di questo fenomeno irriducibile, quello che è stato trovato nelle esperienze precedenti non è realmente il fuoco (considerato come punto in cui convergono i raggi prossimali all'asse ottico), ma è il centro dell'intervallo di messa a fuoco dell'immagine. Per questo, andando a correggere tale valore, risulta necessario aggiungere $\frac{l'}{2}$ per spostarsi dal punto in cui si \`e registrato il fuoco nelle prime tre esperienze al punto dove efffettivamente si ritiene più probabile sia il fuoco; all'incertezza va sommata quadraticamente la stessa quantità per considerare il fatto che non si sa esattamente dove sia il fuoco nell'intervallo che va da quello registrato a quello pi\`u probabile. Si considera dunque f come media pesata di tali valori:
+\[ f = (6.65 \pm 0.03) \cm. \] 
+
+
+Per quanto riguarda $c$, si \`e proceduto creando un nuovo valore per ogni set di dati; la formula di propagazione fornisce 
+\[  \sigma^2_{c_i} =\frac{f^2    \sigma^2_{l_i} + l^2    \sigma^2_{f}}{R^4} \]
+in cui si \`e considerata trascurabile l'incertezza su $R=1.40\cm$, fornito dal laboratorio.
+Da questo campione si \`e ricavata la media pesata, con relativa incertezza:
+\[ c = 1.7 \pm 0.1 \] 
+
+
+
+Come ulteriore stima di $c$, si \`e utilizzata la formula
+\[ c_t = \frac{t   f   (f-l)}{2R^3}, \]
+dove $t$ \`e l'aberrazione sferica trasversale misurata, stimata con una media semplice, potendo considerare $\sigma$ costante:
+\[ t = (0.194 \pm 0.002) \cm.\]
+L'incertezza su $t$ si \`e trovata a posteriori con la formula RMS, per evitarne una difficile stima a partire dalla sensibilit\`a dello strumento. 
+L'incertezza di $c_t$ si trova quindi con la propagazione: 
+\[ \sigma_{c_t} = \sqrt{ \frac
+{ f^2   (f-1)^2    \sigma^2_{t}  +  t^2   (2f-1)^2    \sigma^2{f}  +  t^2   f^2    \sigma^2_{l}}
+{4R^6}
+}   \]
+\[c_t = 1.45 \pm 0.04. \]
+
+
+La stima di $c_t$ attraverso $t$ \`e meno affidabile della stima di $c$ attraverso $l$, in quanto i valori di $t$ registrati sono influenzati da errori sistematici non trascurabili nel caso in cui la misura venga fatta non esattamente nel fuoco prossimale. Per questo motivo per la correzione del fuoco si \`e preferito utilizzare l'aberrazione sferica longitudinale rispetto a quella trasversale.
+Anche la differenza tra le due stime $c$ e $c_t$ \`e imputabile ai medesimi errori sistematici su $t$. La difficolt\`a nella stima di tali errori rende inoltre impossibile una media tra le due stime, irrimediabilmente correlate.

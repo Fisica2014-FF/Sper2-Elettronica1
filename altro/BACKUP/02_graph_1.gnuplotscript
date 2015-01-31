@@ -1,0 +1,10 @@
+set terminal tikz
+set output "gnuplot/immagini/02_graph_1.tex"
+#set title "Punti coniugati"
+set xlabel '$\nicefrac{1}{p} [\cm^{-1}]$'
+set ylabel '$\nicefrac{1}{q} [\cm^{-1}]$'
+
+
+
+plot "dati_formattati/02dat.fdat" using (1.0/($2-$1+0.1*$4-0.1*$5)):(1.0/($3-$2-0.1*$4-0.1*$5)) title "Campione I", "dati_formattati/02betadat.fdat" using (1.0/($2-$1+0.1*$4-0.1*$5)):(1.0/($3-$2-0.1*$4-0.1*$5)) title "Campione II"
+

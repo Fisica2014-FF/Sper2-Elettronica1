@@ -1,0 +1,52 @@
+Come detto nella descrizione dell'apparato strumentale, il tasso di rilevamento dei dati è di 20 al secondo. Questo corrisponde a una
+frequenza di campionamento di 20 Hertz, di molto superiore al 
+Nyquist rate necessario per il pendolo (il doppio della massima frequenza
+campionabile), dato che come verificabile a vista ha una frequenza dell'ordine di 1 Hz. 
+Non ci sono quindi problemi di aliasing e sottocampionamento.
+Per quanto riguarda l'offset, è stata rifatta la calibrazione prima di ogni presa dati (inizio giornata) e si può vedere che lo strumento era
+ calibrato da un'evidente simmetria rispetto all'asse delle ascisse.
+Per il calcolo dei massimi è stato utilizzato un programma che riconoscesse i punti di massimo e minimo approssimando
+la funzione come una parabola in un intorno dei dati "stazionari" (dati massimi e minimi locali) usando il dato precedente e il successivo,
+vincolando la parabola a passare per questi 3 punti e trovandone il vertice. L'errore legato all'utilizzo
+ di questa approssimazione è, come noto dallo sviluppo di Taylor delle funzioni goniometriche, $o(x^3)$ che, essendo lo step $0.05\ s$ è dell'ordine di $10^{-3}$,
+  e trascurabile rispetto agli altri errori.
+ Per una stima delle ampiezze legate alle frequenze di oscillazione sono stati presi i valori medi delle ordinate dei massimi (e dei valori assoluti dei minimi).
+
+Una stima della pulsazione di risonanza è stata fatta con un processo di esplorazione iniziale che ha permesso, attraverso
+il metodo di bisezione, di concentrarsi sull'area nella quale l'ampiezza era più alta. Il valore finale trovato risulta di $(0.968 \pm 0.001) [Hz]$.
+ Tale valore è stato scelto in quanto valore per il quale l'ampiezza misurata risultava più alta. L'errore preso è la precisione dello
+ strumento. Sono state abbandonate idee differenti sulla stima di questo valore in quanto dato l'apparato sperimentale l'errore non
+ può essere ridotto.
+Per stimare il coefficiente di smorzamento $\gamma$ legato al forza viscosa dell'acqua è stato tentato un approccio diretto con gnuplot, 
+ma i problemi del suo algoritmo (Levenberg–Marquardt, una forma di step gradient descent) nel caso di funzioni come questa, in cui il gradiente 
+dei minimi quadrati è pieno di punti 
+stazionari locali, ne hanno impedito l'applicabilità pratica. Quindi è stato scelto un altro approccio che elimini questi problemi, in particolare limitando lo
+studio a una semplice funzione esponenziale, che è stata ulteriormente semplificata in un fit lineare usando una scala logaritmica.
+Di consequenza, sono stati cercati gli $x_i \mid f(x_i)=0$. Essendo la funzione che descrive l'angolo in assenza della forzante
+\begin{equation}
+	\theta(t) = \theta_0 e^{-\gamma t} \sin(\omega_s t + \phi),
+\end{equation}
+poichè $e^{-\gamma t} > 0$ gli zeri della funzione sono solo gli zeri del seno. Quindi i punti medi 
+$x_m = \frac{x_i + x_{i+1}}{2}$ fra gli zeri sono i punti in cui $sin(\omega_s t + \phi) = 1$.
+Interpolando questi punti la funzione diventa dunque
+\[
+	\theta_0 e^{-\gamma t} \cdot 1 = \theta_0 e^{-\gamma t}.
+\]
+Interpolando questa funzione con i punti $(x_m,\log{f(x_m)})$ (le coordinate $f(x_m)$ sono state calcolate, nei casi in cui non fossero già un punto dei dati,
+approssimando linearmente tra i due punti più vicini).
+
+%L'ampiezza massima della forzante è stata regolata a 10 milligiri perché altrimenti veniva
+La pulsazione di smorzamento è stata ottenuta attraverso una media pesata delle pulsazioni ottenute dallo studio dei periodi dei
+grafici durante la fase di smorzamento (vedasi \textbf{Tabella~\ref{tab:pulssmorz}}).
+Gli errori sono stati stimati a partire da una stima diretta con la sommatoria degli scarti al quadrato diviso $N-1$.
+La pulsazione propria è stata trovata attraverso la formula $\omega_0 =\sqrt{{\omega_s} ^ 2 + \gamma ^ 2 }$ e il suo errore è stato trovato per propagazione.
+I grafici rivelano che, entro gli errori casuali, l'analisi dati compiuta risulta in linea con ciò che ci si aspettava. Asperità 
+presenti nel grafico possono essere connesse o a spike momentanei del sistema di misurazione o a movimenti bruschi che ne hanno
+ alterato il perfetto funzionamento. Dalla curva di risonanza, in particolare, si riconosce che i dati che peggio approssimano una
+ distribuzione teorica sono quelli che presentano un errore più elevato. Sebbene alcuni risultati dell'analisi dati
+ non sembrino rispecchiare al meglio la curva sperimentale non si riconosce in essi un errore sistematico che possa portare a un errata
+ stima dei risultati ottenuti, ad esempio nei grafici del moto a regime tutti i massimi sembrano leggermente spostati a destra ma ciò non influenza né il calcolo
+ della frequenza né quelo dell'ampiezza. L'apparato strumentale, comunque, permetteva un'ottima
+ ricerca attorno al valore di risonanza, infatti la maggior parte dei dati non perfettamente coerenti sono a basse o alte frequenze, o
+ comunque lontani dalla frequenza di risonanza.
+

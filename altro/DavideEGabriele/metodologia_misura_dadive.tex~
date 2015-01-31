@@ -1,0 +1,119 @@
+ L'esperienza si può suddividere in 5 fasi diverse, ognuna con un'approccio sperimentale e un'analisi dati differente. Questa sezione
+ ha l'unico scopo di descrivere le azioni svolte dagli sperimentatori in laboratorio, non va dunque ad indagare sulle scelte
+ numeriche fatte o sulle analisi dati, per le quali un'accurata descrizione è fornita nelle sezione successive.
+
+ In preparazione ad ogni esperienza, è stato necessario preparare il banco ottico come segue:
+ bisogna in primo luogo portare tutti i micrometri allo zero della scala, dopodichè si sceglie arbitrariamente
+ un punto della guida su cui posizionare il cavaliere portalampada; tale punto è stato scelto il più marginalmente possibile sullla
+ sinistra per avere
+ molto spazio a disposizione per gli altri cavalieri. Bloccato con la vite il cavaliere portalampada, si utilizza il cavaliere
+ con squadra per andare a leggere sulla scala millimetrata il valore che sarebbe corrisposto alla posizione dell'oggetto
+ relativa alla guida ottica dopo aver finito la preparazione dell'apparato sperimentale. Il cavaliere con squadra va subito
+ rimosso dalla guida ottica. Fatto ciò, viene montata la mascherina con il foro singolo sull'apposito supporto presente sul
+ cavaliere portalampada in modo da avere l'anello di fissaggio rivolto a destra.
+ Sistemato il cavaliere portalampada, si prende il cavaliere portalente, si posiziona
+ sulla guida ottica e si avvita prima la lente sul lato rivolto a destra dello stesso, poi il diaframma
+ su quello rivolto a sinistra. \'e necessario utilizzare particolare attenzione nell'avvitare la lente fino alla fine del filo
+ delle componenti meccaniche del sistema. Alla sinistra del portalente non ancora fissato va posto il cavaliere portaschermo
+ con micrometro, in modo tale che lo schermo sia rivolto verso sinistra, e si inserisce nel cavaliere portalampada il filtro
+ di colore giallo.
+
+ Per stimare la lunghezza focale attraverso il metodo dell'autocollimazione si è operato attraverso spostamento del cavaliere
+ portalente con micrometro sulla guida ottica manuale o attraverso il micrometro, e tramite lettura di valori sul metro posto sulla
+ guida o sui micrometri. Il diaframma utilizzato per questa esperienza è quello con un singolo foro centrale.
+ Preparato il banco ottico, prima di iniziare la vera e propria presa dati si è cercato
+ approssimativamente quale potesse essere la posizione del fuoco della lente. Si è quindi mosso il cavaliere portalente e
+ successivamente confrontata grossolanamente la dimensione delle proiezioni del raggio sullo schermo quando esso veniva posto vicino
+ o lontano dal cavaliere portalente. Eseguita una volta questa operazione, essa è stata ripetuta più volte muovendo il cavaliere
+ portalente a sinistra o a destra a seconda che l'immagine nello schermo fosse più grande rispettivamente nel caso lo schermo
+ fosse posto più vicino o più lontano dalla lente. Una reiterazione di queste azioni ha permesso dopo circa 4-5 ripetizioni di
+ trovare un punto approssimativo per il cavaliere portalente per il quale il cerchio proiettato sullo schermo fosse di grandezza
+ ad occhio costante al muoversi del cavaliere portaschermo. Trovato il punto, ci si è spostati a destra di circa mezzo
+ centimetro (iniziando con il valore zero della scala del micrometro sono possibili infatti solo spostamenti dello stesso che vanno
+ ad avvicinare la lente alla lampada, non c'è nessun modo di allontanare le due) e si è bloccato il cavliere protalampada saldamente
+ con l'apposita vite. Il valore letto dall'indice del cavaliere portalente è stato registrato e poi è stata iniziata la vera e propria
+ presa dati. Per prima cosa è stato spostato il micrometro in modo tale che la lente fosse spostata di circa mezzo centimetro, in
+ modo cioè che si trovasse sul punto nel quale a occhio era stata individuata la condizione di fascio parallelo. Successivamente,
+ si è misurato il diametro a posizioni costanti dello schermo (da vicino, 20\(\cm\); da lontano, 130\(\cm\))
+%, distanti tra loro approssimativamente 1 m e costanti. 
+ Per fare ciò,
+ è stato utilizzato il reticolo presente sullo schermo smerigliato: operando con il micrometro che permetteva allo schermo uno
+ spostamento perpendicolare all'asse ottico, sono state misurate le posizioni che esso segnava quando una linea del reticolo
+ diventava tangente al cerchio luminoso. Presi i dati, si è calcolato il diametro del cerchio sommando un centimetro alla differenza
+ ottenuta, come risulta evidente dalla costruzione fisica del sistema.
+ Andando a confrontare i dati con la stessa logica dei passaggi precedenti, si è spostata la lente avvicinandola o allontanandola
+ dall'oggetto andando a
+ operare sul micrometro presente nel cavaliere portalente. Trovato il punto in cui la differenza tra il diametro proiettato sullo
+ schermo più distante e quello proiettato sullo schermo più prossimo ha cambiato segno, si è andati ad indagare con maggiore
+ precisione sull'area compresa tra le due misurazioni.
+
+ Per trovare il fuoco attraverso il metodo dei punti coniugati, invece, si è sempre bloccato il cavaliere portalampada ma, a
+ differenza di quella precedente, non si è bloccato il cavaliere portalente. Si è operato senza micrometri, solamente spostando i
+ cavalieri lungo la guida ottica, e come nell'esperienza precendete si è utilizzato il diaframma con singolo buco centrale.
+ Preparato il banco ottico si è posto il cavaliere portalente inizialmente a una distanza dal cavaliere portalampada maggiore del
+ fuoco che era stato stimato con il metodo dell'autocollimazione. Muovendo il cavaliere portaschermo si è cercato il punto in cui il
+ raggio proiettato presentava diametro più piccolo possibile (per vederlo con più facilità si è fatto uso dell'oculare in dotazione),
+ a quel punto si sono registrati su una tabella la posizione del cavaliere protalente e quella del cavaliere portaschermo. Il
+ cavaliere portalente è stato poi spostato a destra e si è ripetuta l'operazione, andando ad aggiugnere una riga alla tabella
+ precedentemente fatta. Il processo è stato ripetuto andando ad indagare il più uniformemente possibile le posizioni permesse dalla
+ guida ottica.
+
+ Per trovare il fuoco attraverso il metodo di Bessel, invece, sono stati tenuti fermi i cavalieri portalampada e quello portaschermo
+ e si è mosso solamente il cavaliere portalente. Si è preparato il banco ottico e utilizzato il diaframma con buco singolo e il
+ cavaliere portalente senza micrometro. Per prima cosa, data l'analisi teorica che si può fare a riguardo, si è bloccato
+ il cavaliere protalampada il più a sinistra possibile (come nelle altre esperienze) ed, utilizzando le stime fatte con le altre
+ esperienze, si è bloccato il cavaliere portaschermo a più di 4f. Muovendo il cavaliere portalente, si sono
+ cercate le due posizioni per cui l'immagine andava a fuoco. Nel caso non risultasse evidente distinguere un fuoco dall'altro si è
+ allontanato ulteriormente il cavaliere portaschermo. Trovata una posizione dei due cavalieri fissi tale che i due fuochi fossero
+ facilmente
+ distinguibili e i cavalieri non fossero troppo lontani tra loro, si è iniziata la presa dati. Aiutandosi con l'oculare, è stata
+ misurata la posizione della lente per la quale il fascio andava a fuoco sullo schermo. Spostando il cavaliere portalente è stato,
+ successivamente, registrato il punto in cui l'immagine andava nuovamente a fuoco nonostante la posizione fosse diversa.
+ Tali misurazioni di posizione sono stati ripetuti 10 volte ciascuno.
+
+ Dopo le varie stime del fuoco, si sono cercate l'aberrazione sferica e l'aberrazione cromatica della lente. Per quanto riguarda l'
+ aberrazione sferica, si è preparato il banco ottico andando, differentemente rispetto ai casi precedenti, ad utilizzare entrambi
+ i cavalieri portalenti: quello con micrometro portante il doppietto di Dollond e quello senza micrometro portante la lente.
+ Inizialmente non è stato montato alcun diaframma ed è stato posizionato sulla guida ottica solamente il cavaliere con il
+ doppietto acromatico. Grazie ad una bacchettina lunga circa quanto la distanza focale del doppietto, si è bloccato il
+ cavaliere portalente in una posizione tale che l'oggetto occupasse uno dei suoi fuochi. Per fare ciò si è fatto in modo che
+ tale barretta rimanesse
+ sospesa bloccata dagli attriti tra il doppietto e la mascherina montata sul cavaliere portalampada, a quel punto il cavaliere
+ con il doppietto acromatico è stato bloccato con la vite. Successivamente, andando a spingere
+ la lente verso sinistra mantenendo la vite del cavaliere portalente avvitata, grazie alla molla presente all'interno del
+ micrometro, è stata rimossa la bacchettina. Analogamente a quanto fatto nel caso dell'autocollimazione (ma con il doppietto di
+ Dollond
+ e senza diaframma) è stato cercato velocemente il punto in cui il diametro della proiezione sullo schermo sembrava costante al
+ variare della posizione del cavaliere portaschermo. Dopo aver aggiustato un paio di volte con il micrometro la posizione della
+ lente, si è potuto utilizzare il raggio parallelo creato per la misurazione dell'aberrazione sferica. è stato messo tra il cavaliere
+ con il doppietto acromatico e il cavaliere portaschermo il cavaliere con lente, al quale è stato avvitato il diaframma con 4 buchi,
+ in modo tale che i due buchi marginali fossero su un piano orizzontale. Il cavaliere portalente senza micrometro è stato posizionato
+ il più vicino possibile all'altro cavaliere portalente, in modo che non ci fossero dispersioni del fascio uniforme legate alla
+ distanza e che tutti e 4 i buchi del diaframma fossero ben illuminati. Fatto ciò, si è andato a muovere il cavaliere portaschermo
+ fino a
+ trovare approssimativamente il punto in cui le 4 immagini si avvicinavano a formare quello che, a primo impatto, sembrava un
+ punto unico. Si è bloccato il cavaliere portaschermo in quel punto e poi, andando a operare sul micrometro, si è verificato
+ che il movimento dello schermo permettesse di raggiungere agevolmente la posizione nella quale i 4 punti erano ancora separati e
+ la posizione nella quale i 4 punti se separavano di nuovo nettamente. Fatto ciò è stato possibile iniziare la vera e propria presa
+ dati, per la quale è stato solamente utilizzato il micrometro che permetteva allo schermo uno spostamento parallelo all'asse
+ ottico. Partendo dal punto per il quale i 4 punti erano ben distinti si è cercato il punto in cui i raggi marginali convergessero
+ in un unico punto, facendo vedere l'immagine all'oculare come tre punti allineati verticalmente. Registrato il valore letto sul
+ micrometro, si è portato avanti il micrometro fino a vedere i tre punti allienati, questa volta, orizzontalmente. Questo valore
+ è stato registrato e poi si è registrata la posizione nella quale nello schermo erano ancora visibili tre punti orizzontali.
+ Questi ultimi due valori sono stati tali che se la lettura del micrometro fosse stata inferiore al primo valore o superiore
+ al secondo non si sarebbero visti i punti orizzontalmente allienati, mentre si sono visti per tutti i valori del micrometro tra
+ loro comrpesi. Sono state prese 10 terne di valori diversi. Dopo aver stimato il fuoco prossimale andando a mediare per ogni terna
+ gli ultimi due valori si è tornati in questa posizione per misurare la distanza tra i due punti orizzontali in quella posizione,
+ ripetendo il procedimento fatto nell'esperienza dell'autocollimazione di stima di lunghezze sullo schermo smerigliato,  stando
+ però attenti nel sommare o meno il passo del reticolo. Sfortunatamente a causa di un dissesto delle componenti meccaniche le ultime
+ tre misure della distanza tra i raggi marginali nel fuoco prossimale sono risultate impossibili da prendere.
+
+ Per quanto riguarda la misurazione dell'aberrazione cromatica, ivnece, sono stati usati i filtri presenti sul cavaliere portalente
+ differentemente da come fatto in tutte le altre esperienze. Il banco ottico è stato preparato, ed è stato creato un fascio di luce
+ parallela analogamente a come era stato fatto nel caso della misurazione dell'aberrazione sferica. Anche in questo caso si è
+ utilizzato il diaframma con i 4 buchi, andando a coprire però i buchi centrali, in modo da potersi concentrare sul fuoco
+ marginale. Si è portato di nuovo lo schermo circa nella posizione in cui si vedevano convergere i fuochi marginali del colore giallo
+ e si è bloccato tramite l'apposita vite. Fatto ciò, è stato cambiato il filtro, andando a creare un fascio di luce blu. Operando
+ con il micrometro su schermo, si è cercato il punto in cui il fascio blu convergeva, proiettando sullo schermo smerigliato un
+ solo punto blu. Registrato il valore letto sul micrometro, si è passati dal filtro blu a quello rosso e si è ripetuta la ricerca
+ del fuoco, annotando il valore letto sul micrometro. L'esperienza è stata ripetuta 10 volte.

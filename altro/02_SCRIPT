@@ -1,0 +1,6 @@
+g++ 02_fit.cxx -o 02_fit
+cat 02_dati_01.txt | ./02_fit > 02_fitlin.txt
+
+cat 02_grafico.gnuplotscript | gnuplot
+cat 02_residui.gnuplotscript | gnuplot
+

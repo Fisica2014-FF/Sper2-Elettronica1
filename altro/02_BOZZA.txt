@@ -1,0 +1,15 @@
+Parametri retta:
+m = 2.80948 +/- 0.00398579
+c = 0.247371 +/- 0.214058
+cov(m, c) = -0.000660084
+rho(m, c) = -0.105487
+
+Stima R con interpolazione
+R=m=2.80948
+sR=0.364389
+sRstat=0.00398579
+sRsist=0.364367
+sR/R=12.97%
+
+
+

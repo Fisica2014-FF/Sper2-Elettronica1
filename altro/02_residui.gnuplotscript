@@ -1,0 +1,9 @@
+set terminal png
+set output '02_residui.png'
+set title 'Grafico dei residui'
+set xlabel 'I (mA)'
+set ylabel 'V (mV)'
+###set xtitle 
+###set ytitle 'Residui'
+
+plot '02_fitlin.txt'

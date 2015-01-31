@@ -1,0 +1,37 @@
+%**01_tab_1.tx**
+
+Per la stima della posizione del fuoco e il calcolo degli errori, si considera la seguente formula:
+\begin{equation} 
+f = P_L - P_0 + \left(\mu _0 - \mu ^{\star}\right) + \frac{\mathrm{d}r}{2} - \frac{\overline{PP'}}{2}.
+\end{equation}
+$ \mu ^{\star} $ \`e individuato dall'intersezione delle due rette interpolanti precedentemente calcolate:
+\[ \mu ^{\star} = x_{\mathrm{intersezione}} = \frac{a - a'}{b' - b} = F\left(a, a', b, b'\right), \]
+da cui, grazie alla formula di propagazione degli errori, si ottiene, considerando $\left(a, b\right)$, $\left(a', b'\right)$ rispettivamente correlati e le rette tra loro indipendenti,
+% split va dentro a un'equazione
+\begin{equation*}
+\begin{split} % align numera tutte le righe e se devo toglierne una devo usare \nonumber alla fine della riga, align* nessuna. Meglio split che numera solo una volta
+	\sigma^2_{F\left(a, a', b, b'\right)}  &= \left(\left.\frac{\partial F}{\partial a}\right|_{x_{\mathrm{int}}}\right)^2 \cdot \sigma^2_{a} + \left(\left.\frac{\partial F}{\partial a'}\right|_{x_{\mathrm{int}}}\right)^2 \cdot \sigma^2_{a'} + \left(\left.\frac{\partial F}{\partial b}\right|_{x_{\mathrm{int}}}\right)^2 \cdot \sigma^2_{b} +\\
+								&+ \left(\left.\frac{\partial F}{\partial b'}\right|_{x_{\mathrm{int}}}\right)^2 \cdot \sigma^2_{b} + 2\left(\left.\frac{\partial F}{\partial a}\right|_{x_{\mathrm{int}}}\right)\left(\left.\frac{\partial F}{\partial b}\right|_{x_{\mathrm{int}}}\right) \cdot \cov\left(a, b\right) + \\
+								&+ 2\left(\left.\frac{\partial F}{\partial a'}\right|_{x_{\mathrm{int}}}\right)\left(\left.\frac{\partial F}{\partial b'}\right|_{x_{\mathrm{int}}}\right)^2 \cdot \cov \left(a', b'\right)
+\end{split}
+\end{equation*}
+che, sotto radice quadrata, d\`a l'errore per $ \mu ^{\star} $, considerandolo distribuito normalmente.
+Svolgendo i calcoli, si trova
+\begin{equation}
+\begin{split}
+\sigma^2_{F\left(a, a', b, b'\right)}  &= \left(\left.\frac{1}{b'- b}\right|_{x_{\mathrm{int}}}\right)^2 \cdot \left(\sigma^2_{a} + \sigma^2_{a'}\right) + \left(\left.\frac{a - a'}{\left(b' - b\right)^2}\right|_{x_{\mathrm{int}}}\right)^2 \left(\sigma^2_{b} + \sigma^2_{b'}\right) + \\
+							&+ 2 \left(\left.\frac{1}{b'- b}\right|_{x_{\mathrm{int}}}\right) \left(\left.\frac{a - a'}{\left(b' - b\right)^2}\right|_{x_{\mathrm{int}}}\right) \big(\cov\left(a, b\right) + \cov(a', b') \big).
+\end{split}
+\end{equation}
+Calcoliamo le covarianze:
+\[ \cov\left(a, b\right) = -\frac{\sum_{i} x_i}{\Delta}\sigma_y^2 \] % "Delta" cosa?
+e vale lo stesso per $a'$ e $b'$, con le adeguate $\left(x, y\right)$.
+
+Si trova per il fuoco il valore 
+\[ f=\left(7.14437 \pm \framebox{0.7} <- GIUSTO\ O\ NO?\right) \cm , \] 
+dove come errore si \`e preso quello fornito dal laboratorio, derivato dall'analisi statistica dell'errore compiuto dagli studenti nei vari anni. Tale stima va considerata a meno della correzione di aberrazione sferica, che verr\`a compiuta sulla miglior stima del valore di $ f $.
+
+% Io mi dilungherei personalmente un pochino di più sulla questione dell'errore, ho capito che è calato dall'alto, però ne parlerei con un po' più precisione: intendo, io direi qualcosa del tipo "L'incertezza è presa di 0.7 perché a causa dei ritardi delle componenti meccaniche e 
+% degli errori di lettura è stato precedentemente verificato che il valore della posizione di ogni cavaliere ha un'incertezza di 0.05 cm -tra l'altro Gabriele, c'è uno zero che mi manca qui-, per cui l'incertezza -Non usare errore, nella prima lezione che abbiamo fatto con lui ha 
+% fatto un discorso su come gli erorri siano una cosa, mentre quello che stima un fisico è un'incertezza- è data dalla somma quadratica di tutte le incertezze presenti nella formula, ma da un'occhiata rapida risulta evidente come tutte le incertezze sono effettivamente trascurabili 
+% rispetto a quelle su $P_L$ e $P_o$, per cui l'incertezza si riduce a $\radq{2} \cdot \sigma_{posizionamento} = 0.07 \cm$" ---Davide

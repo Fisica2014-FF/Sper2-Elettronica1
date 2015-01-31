@@ -1,0 +1,403 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     12385,        394]
+NotebookOptionsPosition[     10903,        342]
+NotebookOutlinePosition[     11240,        357]
+CellTagsIndexPosition[     11197,        354]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"EP", "[", 
+   RowBox[{"R_", ",", "\[CapitalDelta]P_"}], "]"}], ":=", 
+  RowBox[{"R", "*", "\[CapitalDelta]P"}]}], "\n", 
+ RowBox[{
+  RowBox[{"ED", "[", 
+   RowBox[{"ndigit_", ",", "minfs_"}], "]"}], ":=", 
+  RowBox[{"ndigit", "*", "minfs"}]}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"STD", "[", 
+    RowBox[{"EP_", ",", "ED_"}], "]"}], ":=", 
+   RowBox[{"Sqrt", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{"0.58", "*", "ED"}], ")"}], "^", "2"}], "+", 
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{"0.58", "*", "EP"}], ")"}], "^", "2"}]}], "]"}]}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{"fs", "=", 
+    RowBox[{"600", " ", "ohm"}]}], "*)"}], 
+  RowBox[{
+   RowBox[{"ndigit", "="}], ";", 
+   RowBox[{"minfs", "="}], ";"}]}], "\n", 
+ RowBox[{
+  RowBox[{"\[CapitalDelta]P", "="}], ";"}], "\[IndentingNewLine]"}], "Input",
+ CellChangeTimes->{{3.631713734269578*^9, 3.631713760468718*^9}, {
+  3.631713817860898*^9, 3.631713841979869*^9}},
+ EmphasizeSyntaxErrors->True],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{
+    "Resistenza", " ", "Voltmetro", " ", "AGILENT", " ", "misurata", " ", 
+     "con", " ", "T110B"}], ";", " ", 
+    RowBox[{"fs", "=", 
+     RowBox[{"20", "*", 
+      SuperscriptBox["10", "6"]}]}]}], "*)"}], "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"R", "=", 
+     RowBox[{"RV", "=", 
+      RowBox[{"11.17", "*", 
+       SuperscriptBox["10", "6"]}]}]}], ";", " ", 
+    RowBox[{"ndigit", "=", "15"}], ";", 
+    RowBox[{"minfs", "=", 
+     RowBox[{"0.01", "*", 
+      SuperscriptBox["10", "6"]}]}], ";", 
+    RowBox[{"\[CapitalDelta]P", "=", 
+     RowBox[{"1.5", "/", "100"}]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{"sRVstat", "=", 
+    RowBox[{"ED", "[", 
+     RowBox[{"ndigit", ",", "minfs"}], "]"}]}], "\[IndentingNewLine]", 
+   RowBox[{"sRVsist", "=", 
+    RowBox[{"EP", "[", 
+     RowBox[{"R", ",", "\[CapitalDelta]P"}], "]"}]}], "\[IndentingNewLine]", 
+   RowBox[{"sRV", "=", 
+    RowBox[{"STD", "[", 
+     RowBox[{
+      RowBox[{"EP", "[", 
+       RowBox[{"R", ",", "\[CapitalDelta]P"}], "]"}], ",", 
+      RowBox[{"ED", "[", 
+       RowBox[{"ndigit", ",", "minfs"}], "]"}]}], "]"}]}]}]}]], "Input",
+ CellChangeTimes->{{3.6317138484949217`*^9, 3.63171411405265*^9}, 
+   3.6317141557092524`*^9, {3.631714227871484*^9, 3.63171422852672*^9}}],
+
+Cell[BoxData["150000.`"], "Output",
+ CellChangeTimes->{{3.631714081555376*^9, 3.631714114883649*^9}}],
+
+Cell[BoxData["167550.`"], "Output",
+ CellChangeTimes->{{3.631714081555376*^9, 3.631714114885803*^9}}],
+
+Cell[BoxData["130432.96378216665`"], "Output",
+ CellChangeTimes->{{3.631714081555376*^9, 3.631714114887088*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"Resistenza", " ", "Amperometro", " ", "a", " ", "fs"}], "=", 
+     RowBox[{"200", "\[Mu]A"}]}], ";", " ", 
+    RowBox[{"fs", "=", 
+     RowBox[{"6000", "ohm"}]}]}], "*)"}], "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"R", "=", 
+     RowBox[{"RA1", "=", "1002"}]}], ";", " ", 
+    RowBox[{"ndigit", "=", "1"}], ";", 
+    RowBox[{"minfs", "=", "1"}], ";", 
+    RowBox[{"\[CapitalDelta]P", "=", 
+     RowBox[{"0.9", "/", "100"}]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{"sRVstat", "=", 
+    RowBox[{"ED", "[", 
+     RowBox[{"ndigit", ",", "minfs"}], "]"}]}], "\[IndentingNewLine]", 
+   RowBox[{"sRVsist", "=", 
+    RowBox[{"EP", "[", 
+     RowBox[{"R", ",", "\[CapitalDelta]P"}], "]"}]}], "\[IndentingNewLine]", 
+   RowBox[{"sRV", "=", 
+    RowBox[{"STD", "[", 
+     RowBox[{
+      RowBox[{"EP", "[", 
+       RowBox[{"R", ",", "\[CapitalDelta]P"}], "]"}], ",", 
+      RowBox[{"ED", "[", 
+       RowBox[{"ndigit", ",", "minfs"}], "]"}]}], "]"}]}], 
+   "\[IndentingNewLine]"}]}]], "Input",
+ CellChangeTimes->{{3.631714174420617*^9, 3.631714268346981*^9}}],
+
+Cell[BoxData["1"], "Output",
+ CellChangeTimes->{3.631714270127616*^9}],
+
+Cell[BoxData["9.018`"], "Output",
+ CellChangeTimes->{3.6317142701286*^9}],
+
+Cell[BoxData["5.262499652598563`"], "Output",
+ CellChangeTimes->{3.631714270130164*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"Resistenza", " ", "Amperometro", " ", "a", " ", "fs"}], "=", 
+     RowBox[{"2", "mA"}]}], ";", " ", 
+    RowBox[{"fs", "=", 
+     RowBox[{"600", "ohm"}]}]}], "*)"}], "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"R", "=", 
+     RowBox[{"RA2", "=", "102.1"}]}], ";", " ", 
+    RowBox[{"ndigit", "=", "2"}], ";", 
+    RowBox[{"minfs", "=", "0.1"}], ";", 
+    RowBox[{"\[CapitalDelta]P", "=", 
+     RowBox[{"0.9", "/", "100"}]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{"sRVstat", "=", 
+    RowBox[{"ED", "[", 
+     RowBox[{"ndigit", ",", "minfs"}], "]"}]}], "\[IndentingNewLine]", 
+   RowBox[{"sRVsist", "=", 
+    RowBox[{"EP", "[", 
+     RowBox[{"R", ",", "\[CapitalDelta]P"}], "]"}]}], "\[IndentingNewLine]", 
+   RowBox[{"sRV", "=", 
+    RowBox[{"STD", "[", 
+     RowBox[{
+      RowBox[{"EP", "[", 
+       RowBox[{"R", ",", "\[CapitalDelta]P"}], "]"}], ",", 
+      RowBox[{"ED", "[", 
+       RowBox[{"ndigit", ",", "minfs"}], "]"}]}], "]"}]}], 
+   "\[IndentingNewLine]"}]}]], "Input",
+ CellChangeTimes->{{3.631714324022316*^9, 3.631714363889628*^9}}],
+
+Cell[BoxData["0.2`"], "Output",
+ CellChangeTimes->{3.631714365915744*^9}],
+
+Cell[BoxData["0.9189`"], "Output",
+ CellChangeTimes->{3.631714365916939*^9}],
+
+Cell[BoxData["0.5454397248495934`"], "Output",
+ CellChangeTimes->{3.6317143659181833`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"Resistenza", " ", "Amperometro", " ", "a", " ", "fs"}], "=", 
+     RowBox[{"20", "mA"}]}], ";", " ", 
+    RowBox[{"fs", "=", 
+     RowBox[{"6000", "ohm"}]}]}], "*)"}], "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"R", "=", 
+     RowBox[{"RA3", "=", "11.4"}]}], ";", " ", 
+    RowBox[{"ndigit", "=", "1"}], ";", 
+    RowBox[{"minfs", "=", "1"}], ";", 
+    RowBox[{"\[CapitalDelta]P", "=", 
+     RowBox[{"0.9", "/", "100"}]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{"sRVstat", "=", 
+    RowBox[{"ED", "[", 
+     RowBox[{"ndigit", ",", "minfs"}], "]"}]}], "\[IndentingNewLine]", 
+   RowBox[{"sRVsist", "=", 
+    RowBox[{"EP", "[", 
+     RowBox[{"R", ",", "\[CapitalDelta]P"}], "]"}]}], "\[IndentingNewLine]", 
+   RowBox[{"sRV", "=", 
+    RowBox[{"STD", "[", 
+     RowBox[{
+      RowBox[{"EP", "[", 
+       RowBox[{"R", ",", "\[CapitalDelta]P"}], "]"}], ",", 
+      RowBox[{"ED", "[", 
+       RowBox[{"ndigit", ",", "minfs"}], "]"}]}], "]"}]}], 
+   "\[IndentingNewLine]"}]}]], "Input",
+ CellChangeTimes->{{3.631714396360072*^9, 3.631714449746579*^9}}],
+
+Cell[BoxData["1"], "Output",
+ CellChangeTimes->{3.631714450771006*^9}],
+
+Cell[BoxData["0.10260000000000001`"], "Output",
+ CellChangeTimes->{3.631714450772071*^9}],
+
+Cell[BoxData["0.5830447684903792`"], "Output",
+ CellChangeTimes->{3.631714450773265*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"Resistenza", " ", "Amperometro", " ", "a", " ", "fs"}], "=", 
+     RowBox[{"200", "mA"}]}], ";", " ", 
+    RowBox[{"fs", "=", 
+     RowBox[{"6000", "ohm"}]}]}], "*)"}], "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"R", "=", 
+     RowBox[{"RA4", "=", "1.8"}]}], ";", " ", 
+    RowBox[{"ndigit", "=", "1"}], ";", 
+    RowBox[{"minfs", "=", "1"}], ";", 
+    RowBox[{"\[CapitalDelta]P", "=", 
+     RowBox[{"0.9", "/", "100"}]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{"sRVstat", "=", 
+    RowBox[{"ED", "[", 
+     RowBox[{"ndigit", ",", "minfs"}], "]"}]}], "\[IndentingNewLine]", 
+   RowBox[{"sRVsist", "=", 
+    RowBox[{"EP", "[", 
+     RowBox[{"R", ",", "\[CapitalDelta]P"}], "]"}]}], "\[IndentingNewLine]", 
+   RowBox[{"sRV", "=", 
+    RowBox[{"STD", "[", 
+     RowBox[{
+      RowBox[{"EP", "[", 
+       RowBox[{"R", ",", "\[CapitalDelta]P"}], "]"}], ",", 
+      RowBox[{"ED", "[", 
+       RowBox[{"ndigit", ",", "minfs"}], "]"}]}], "]"}]}]}]}]], "Input",
+ CellChangeTimes->{{3.631714475530197*^9, 3.63171449767844*^9}}],
+
+Cell[BoxData["1"], "Output",
+ CellChangeTimes->{3.6317145009004717`*^9}],
+
+Cell[BoxData["0.016200000000000003`"], "Output",
+ CellChangeTimes->{3.631714500901616*^9}],
+
+Cell[BoxData["0.5800761026072354`"], "Output",
+ CellChangeTimes->{3.631714500902958*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"Resistenza", " ", "Amperometro", " ", "a", " ", "fs"}], "=", 
+     RowBox[{"2", "A"}]}], ";", " ", 
+    RowBox[{"fs", "=", 
+     RowBox[{"6000", "ohm"}]}]}], "*)"}], "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"R", "=", 
+     RowBox[{"RA5", "=", "1.2"}]}], ";", " ", 
+    RowBox[{"ndigit", "=", "1"}], ";", 
+    RowBox[{"minfs", "=", "1"}], ";", 
+    RowBox[{"\[CapitalDelta]P", "=", 
+     RowBox[{"0.9", "/", "100"}]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{"sRVstat", "=", 
+    RowBox[{"ED", "[", 
+     RowBox[{"ndigit", ",", "minfs"}], "]"}]}], "\[IndentingNewLine]", 
+   RowBox[{"sRVsist", "=", 
+    RowBox[{"EP", "[", 
+     RowBox[{"R", ",", "\[CapitalDelta]P"}], "]"}]}], "\[IndentingNewLine]", 
+   RowBox[{"sRV", "=", 
+    RowBox[{"STD", "[", 
+     RowBox[{
+      RowBox[{"EP", "[", 
+       RowBox[{"R", ",", "\[CapitalDelta]P"}], "]"}], ",", 
+      RowBox[{"ED", "[", 
+       RowBox[{"ndigit", ",", "minfs"}], "]"}]}], "]"}]}]}]}]], "Input",
+ CellChangeTimes->{{3.631714525427309*^9, 3.631714542478549*^9}}],
+
+Cell[BoxData["1"], "Output",
+ CellChangeTimes->{3.631714533601781*^9, 3.6317145890002604`*^9}],
+
+Cell[BoxData["0.0108`"], "Output",
+ CellChangeTimes->{3.631714533601781*^9, 3.631714589001897*^9}],
+
+Cell[BoxData["0.580033824613703`"], "Output",
+ CellChangeTimes->{3.631714533601781*^9, 3.631714589003558*^9}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"(*", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"Resistenza", " ", "Generatore"}], ",", " ", "ricavata"}], ")"}], 
+  "\[IndentingNewLine]"}]], "Input",
+ CellChangeTimes->{{3.631714675842341*^9, 3.631714693759166*^9}}],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{3.631714640782449*^9}],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.631714459241489*^9, 3.631714467260316*^9}}]
+},
+WindowSize->{1366, 744},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+FrontEndVersion->"10.0 for Linux x86 (64-bit) (September 9, 2014)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 1078, 33, 165, "Input"],
+Cell[CellGroupData[{
+Cell[1661, 57, 1335, 36, 122, "Input"],
+Cell[2999, 95, 101, 1, 32, "Output"],
+Cell[3103, 98, 101, 1, 32, "Output"],
+Cell[3207, 101, 112, 1, 32, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3356, 107, 1149, 31, 143, "Input"],
+Cell[4508, 140, 70, 1, 32, "Output"],
+Cell[4581, 143, 73, 1, 32, "Output"],
+Cell[4657, 146, 87, 1, 32, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4781, 152, 1145, 31, 143, "Input"],
+Cell[5929, 185, 73, 1, 32, "Output"],
+Cell[6005, 188, 76, 1, 32, "Output"],
+Cell[6084, 191, 90, 1, 32, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6211, 197, 1144, 31, 143, "Input"],
+Cell[7358, 230, 70, 1, 32, "Output"],
+Cell[7431, 233, 89, 1, 32, "Output"],
+Cell[7523, 236, 88, 1, 32, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[7648, 242, 1116, 30, 121, "Input"],
+Cell[8767, 274, 72, 1, 32, "Output"],
+Cell[8842, 277, 90, 1, 32, "Output"],
+Cell[8935, 280, 88, 1, 32, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[9060, 286, 1114, 30, 121, "Input"],
+Cell[10177, 318, 94, 1, 32, "Output"],
+Cell[10274, 321, 98, 1, 32, "Output"],
+Cell[10375, 324, 109, 1, 32, "Output"]
+}, Open  ]],
+Cell[10499, 328, 234, 6, 55, "Input"],
+Cell[10736, 336, 68, 1, 32, "Input"],
+Cell[10807, 339, 92, 1, 32, "Input"]
+}
+]
+*)
+
+(* End of internal cache information *)

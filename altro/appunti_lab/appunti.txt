@@ -1,0 +1,49 @@
+#prima esperienza nel laboratorio di elettromagnetismo: nella prima colonna è scritto di quale resistenza si stanno misurando i valori, mentre nella seconda il valore letto e nela terza il fondo scala
+R1	67.8	600
+R2	67.9	600
+R3	560.6	600
+R4	1895	6000
+#i potenziometri sono stati impostati manualmente e bloccati R5 a 150 ohm (letto direttamente nel multimetro) e R6 a 250 ohm. I valori sono riportati in tabella
+R5	149.8	600
+R6	252.0	600
+#R5 faccacare
+#misura della serie:
+serie	401.7	600
+parallelo	94.0	600
+
+#SECONDO ESPERIMENTINO
+R_x	3.0	600
+#facciamo qualche misurina, partendo da R_p massimo e andando a diminuire sia lei che agendo sull'intensità elettrica.
+#riportato nella prima colonna il valore dell'amperometro, nella seconda quella del voltmetro
+#resistenza a 400 (scala farlocca) agito sul generatore
+100.0	280.1
+72.9	204.3
+60.8	171.7
+51.4	145.3
+#37.5	106.4
+#andiamo a cambiare la resistenza, tenendo il generatore a circa 7 V
+#49.6	140.3
+72.9	205.6
+90.5	254.8
+#30.6	86.2
+#25.0	70.5
+81.8	230.1
+64.7	182.0
+
+#TERZA ESPERIENZA
+#TERZA ESPERINZAPUNTOUNO
+#fattto un circuito andando a collegare il fighissimo multimetro arancione al generatore di pensione, andando a non collegare alcuna resistenza o componente agguntivo. La scala di fondo del multimetro è stata fissata a 6 V
+La misura del voltaggio dall'amperometro:	5.010	V
+La corrente che passa per il circuito è di 124.9 mA con l'amperometro a fondo scala a 200 A e risulta un voltaggio di 4.998 V con il fondo scala a 6 V
+
+
+#TERZAPUNTODUE	5.007 V con fondo scala a 6 volt MISURA EFFETTUATA DI 4.600 V 
+misura di R_s = 0.990 ohm
+
+#TERZAPUNTOTRE collegato direttamente il fluke a quellobianco e vecchiotto. Andiamo a misurare la resistenza andando a impostare il fondo scala del T110B a 200 mA (Quello usato in tutte le esperienze, non sono mai stati utilizzati fondi scala diversi) Il valore risulta di 2.2 ohm.
+
+200 microA	1002	6000
+2 mA	102.1	600
+20 mA	11.4	600
+200 mA	1.8	600
+2 A	1.2	600

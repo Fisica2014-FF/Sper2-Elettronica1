@@ -1,0 +1,14 @@
+set terminal tikz
+set output "gnuplot/immagini/02_graph_4.tex"
+#set title "Errori su Po"
+set xlabel '$\nicefrac{1}{p} [\cm^{-1}]$'
+set ylabel '$\nicefrac{1}{q} [\cm^{-1}]$'
+
+f(x) = a - x
+g(x) = b - x
+h(x) = c - x
+fit f(x) 'dati_formattati/02betadatgraph.fdat' via a
+fit g(x) 'dati_formattati/MCgraphminus.fdat' via b
+fit h(x) 'dati_formattati/MCgraphplus.fdat' via c
+
+plot "dati_formattati/02betadatgraph.fdat" title "Campione originario", "dati_formattati/MCgraphminus.fdat" title "Campione per difetto", "dati_formattati/MCgraphplus.fdat" title "Campione per eccesso", f(x) title "Fit", g(x) title "Fit per difetto" , h(x) title "Fit per eccesso"

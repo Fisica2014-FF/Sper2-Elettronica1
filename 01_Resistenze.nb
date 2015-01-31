@@ -1,0 +1,101 @@
+RESISTENZE SINGOLE : MISURA DIRETTA
+In[63]:= Array[res,6]
+Array[std,6]
+Out[63]= {67.8,67.9,560.6,1895,149.8,252.}
+Out[64]= {0.116,0.116,0.116,0.58,0.116,0.116}
+In[65]:= (* ΔX=Err%+Err_digit *)
+EP[R_,ΔP_]:=R*ΔP
+ED[numdigit_,minfs_]:=numdigit*minfs
+STD[EP_,ED_]:=Sqrt[(0.58*ED)^2+(0.58*EP)^2]
+In[68]:= (*R1*)
+res[1]=R=67.8
+(*fs=600 ohm*) numdigit=2; minfs=0.1;
+ΔP=0.9/100;
+std[1]=ED[numdigit,minfs]*0.58
+ERR=STD[EP[R,ΔP],ED[numdigit,minfs]]
+PERCERR=ERR/R
+Out[68]= 67.8
+Out[71]= 0.116
+Out[72]= 0.372441
+Out[73]= 0.00549323
+In[74]:= (*R2*)
+res[2]=R=67.9
+(*fs=600 ohm*) numdigit=2; minfs=0.1;
+ΔP=0.9/100;
+std[2]=ED[numdigit,minfs]*0.58
+ERR=STD[EP[R,ΔP],ED[numdigit,minfs]]
+PERCERR=ERR/R
+Out[74]= 67.9
+Out[77]= 0.116
+Out[78]= 0.372937
+Out[79]= 0.00549245
+In[80]:= (*R3*)
+res[3]=R=560.6
+(*fs=600 ohm*) numdigit=2; minfs=0.1;
+ΔP=0.9/100;
+std[3]=ED[numdigit,minfs]*0.58
+ERR=STD[EP[R,ΔP],ED[numdigit,minfs]]
+PERCERR=ERR/R
+Out[80]= 560.6
+Out[83]= 0.116
+Out[84]= 2.92863
+Out[85]= 0.0052241
+In[86]:= (*R4*)
+res[4]=R=1895
+(*fs=6000 ohm*) numdigit=1; minfs=1;
+ΔP=0.9/100;
+std[4]=ED[numdigit,minfs]*0.58
+ERR=STD[EP[R,ΔP],ED[numdigit,minfs]]
+PERCERR=ERR/R
+Out[86]= 1895
+Out[89]= 0.58
+Out[90]= 9.90889
+Out[91]= 0.00522897
+In[92]:= (*R5*)
+res[5]=R=149.8
+(*fs=600 ohm*) numdigit=2; minfs=0.1;
+ΔP=0.9/100;
+std[5]=ED[numdigit,minfs]*0.58
+ERR=STD[EP[R,ΔP],ED[numdigit,minfs]]
+PERCERR=ERR/R
+Out[92]= 149.8
+Out[95]= 0.116
+Out[96]= 0.790513
+Out[97]= 0.00527712
+In[98]:= (*R6*)
+res[6]=R=252.0
+(*fs=600 ohm*) numdigit=2; minfs=0.1;
+ΔP=0.9/100;
+std[6]=ED[numdigit,minfs]*0.58
+ERR=STD[EP[R,ΔP],ED[numdigit,minfs]]
+PERCERR=ERR/R
+Out[98]= 252.
+Out[101]= 0.116
+Out[102]= 1.32054
+Out[103]= 0.00524026
+In[104]:= 0.005240256879607441` 
+Out[104]= 0.00524026
+RESISTENZE IN SERIE E PARALLELO : CORRELAZIONE
+In[155]:= sk=0.58*0.9/100;
+STDserie[R1_,R2_,sk_,s1_,s2_]:=Sqrt[(R1+R2)^2*sk^2+s1^2+s2^2]
+res[5]+res[6]
+STDserie[res[5],res[6],sk,std[5],std[6]]
+(*misure dirette della RS*)
+RS=401.7
+numdigit=2; minfs=0.1; (*fs=600*) 
+ΔP=0.9/100;
+sRS=STD[EP[RS,ΔP],ED[numdigit,minfs]]
+(*verifica di compatibilita'*)
+ΔR=-(RS-(res[5]+res[6]))
+Subscript[σ, ΔR]=Sqrt[ΔR^2*sk^2+3*(ED[numdigit,minfs])^2]
+λ=ΔR/Subscript[σ, ΔR]
+
+
+(*STDparall[R1_,R2_,sk_,s1_,s2_]:=Sqrt[]*)
+Out[157]= 401.8
+Out[158]= 2.1038
+Out[159]= 401.7
+Out[161]= 2.10008
+Out[162]= 0.1
+Out[163]= 0.346411
+Out[164]= 0.288675

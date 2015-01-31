@@ -1,0 +1,153 @@
+Un ulteriore metodo per la misurazione del fuoco della lente è quello che prevede l'utilizzo della legge dei punti coniugati.
+ A partire dall'utilizzo dell'equazione di Gauss per le lenti sottili, apportando alcune correzioni legate al modello delle lenti
+ spesse, si può trovare una serie di equazioni che descrivono il comportamento delle lenti attraverso semplici misure di
+ lunghezze. Tali equazioni sono:
+\[p=P_L - P_o + \frac {dr} {2} - \frac {\overline{PP'}}{2}\]
+\[q=P_S - P_L -\frac {dr} {2} + \frac {\overline{PP'}} {2}\]
+\[\frac{1}{f} = \frac {1}{p} + \frac {1}{q}\]
+
+% con  p\textsubscript{o} distanza oggetto, p\textsubscript{L} distanza lente e p\textsubscript{S} distanza schermo.
+ Sono stati prelevati due campioni diversi, dato che il primo campione possedeva delle imprecisioni. I campioni si possono trovare
+ nelle due tabelle di cui sotto:
+%**02_tab_1.fdat**	**02_tab_2.txt**
+\begin{tabella}
+	\centering
+	\input{./tabelle/02_tab_1.tex}
+	\caption{Campione I (udm in $[\cm\,]$)}
+	\label{tab:02tab1}
+\end{tabella}
+
+\begin{tabella}
+	\centering
+	\input{./tabelle/02_tab_2.tex}
+	\caption{Campione II $[\cm\,]$}
+	\label{tab:02tab2}
+\end{tabella}
+
+Tali campioni sono stati presi in momenti diversi, in particolare sono stati riposizionati tutti i cavalieri tra un campione e l'
+ altro. Si faccia un grafico per cercare di comprendere come i dati si ditribuiscono in un piano cartesiano: nel grafico di cui
+ sotto, è rappresentato $\usuq$ in funzione di $\usup$, dalle formule sopra evidenziate risulta che il grafico dovrebbe essere una retta con
+ pendenza $-1$. Ecco come compiono i dati raccolti:
+\begin{grafico} \centering \input{../gnuplot/immagini/02_graph_1.tex} \caption{Punti coniugati} \label{gr:02graph1.tex} \end{grafico}
+
+Dal grafico si evince facilmente come nel "Campione I" ci siano dei punti visibilmente fuori scala, probabilmente a causa di
+ inesattezze da parte degli sperimentatori nel prendere quei dati (quando la lente era particolarmente vicina all'oggetto risultava
+ meno semplice andare ad identificare in maniera precisa a quale distanza sarebbe dovuto essere lo schermo affinché l'immagine
+ fosse a fuoco). Alcune accortezze, prese proprio in risposta al primo campione poco convincente, hanno permesso di prendere
+ un altro set di misure che fosse più preciso del precedente. Ma i due campioni appartengono alla stessa popolazione? La risposta
+ risulta evidentemente no, infatti anche nella zona in cui il "Campione I" non è evidentemente sbagliato le due rette non coincidono,
+ come si può vedere dal seguente grafico in cui sono stati riportati i dati non evidentemente sbagliati assieme alla rette che li
+ interpolano $y = ax + b$:
+%**02_graph_2.txt**	**02_tab_3.txt**
+\begin{grafico} \centering \input{../gnuplot/immagini/02_graph_2.tex} \caption{Le interpolazioni dei due campioni} \label{gr:02graph2.tex} \end{grafico}
+\begin{tabella}
+	\centering
+	\input{./tabelle/02_tab_3.tex}
+	\caption{Rette interpolanti}
+	\label{tab:02tab3}
+\end{tabella}
+
+Come è stato già detto, la teoria ci dice che la retta che rappresentiamo sul piano cartesiano ha pendenza $-1$. Il nostro approccio
+ sperimentale, però, inserisce errori di tipo statistico e sisetmatico che fanno in modo che la retta che effettivamente si trova
+ non ha coefficiente angolare esattamente $-1$ ma ci si avvicina. A questo punto sorge spontaneo chiedersi se convenga di più fare
+ un'analisi dati basata su un'interpolazione a doppio parametro (pendenza, intercetta), o fissare la pendenza a $-1$ come vuole la
+ teoria andando a cercare quale sia l'intercetta in qusto caso. Le due diverse interpolazioni danno origine a un grafico simile:
+%**02_graph_3.txt**	**02_tab_4.txt**
+\begin{grafico} \centering \input{../gnuplot/immagini/02_graph_3.tex} \caption{Le due diverse interpolazioni} \label{gr:02_graph_3.tex} \end{grafico}
+\begin{tabella}
+	\centering
+	\input{./tabelle/02_tab_4.tex}
+	\caption{Numero parametri d'interpolazione}
+	\label{tab:02tab4}
+\end{tabella}
+
+Per comprendere quale dei due modi di interpretare il fenomeno sia più opportuno usare si utilizzi il metodo dell'$\mathcal{F}$-test:
+ sono stati presi gli scarti quadratici medi delle due interpolazione diverse e sono stati normalizzati ai gradi di libertà
+ (sono state raccolte 16 coppie di dati, ciò vuol dire che la retta con un solo parametro libero ha 15 gradi di libertà,
+ siano $n_1$ nelle formule, e la retta con due parametri liberi ha 14 gradi di libertà, $n_2$).
+ La formula utilizzata è:
+\[\mathcal{F}=\frac{\dfrac{{\sum_i \big( y_i-f_1 (c_i) \big) ^2} - {\sum_i \big( y_i-f_2 (c_i) \big) ^2}}{n_1-n_2}}{\dfrac{\sum_i \big( y_i-f_2 
+(c_i) \big) ^2}{n_2}}\]
+
+Andando a calcolare la $\mathcal{F}$ da questa formula risulta $\mathcal{F} = 0.1740$. Ora, per capire quale delle due interpolazioni meglio si addice alla
+ casistica trovata, va cercato nelle tabelle di riferimento relative alla funzione di Von Mises-Fisher, andando a leggere il valore
+ in corrispondenza dei gradi di liberà del numeratore (in questo caso 1) per trovare la colonna e i gradi di libertà del denominatore
+ (in questo caso 14) per trovare la riga, si legge che vale la pena introdurre un nuovo parametro alla teoria 
+ se \footnote{Si prenda una significanza del $90\%$, riferimento tabella: \url{http://www.socr.ucla.edu/applets.dir/f_table.html}} $\mathcal{F} > 3.10$, 
+ da cui evinciamo come non sia necessaria la stima del secondo parametro d'interpolazione della retta, che può essere fissato senza perdere
+ troppe informazioni a $-1$. Per limitare le perdite di dati si effettuino le analisi sia considerando la pendenza della retta fissa,
+ sia considerandola come una variabile casuale dipendente dal campione.
+
+Considerando la pendenza dipendente dal campione, abbiamo una retta che interseca gli assi in due punti di coordinate diverse,
+ coordinate che indicano proprio due stime diverse del reciproco del fuoco della lente, che chiameremo rispettivamente
+$f_x$ se l'intersezione è con l'asse delle $x$ e $f_y$ se l'intersezione è con l'asse delle $y$.
+ Per quanto riguarda $f_y$, la sua stima è piuttosto semplice: prendendo l'equazione della retta interpolante $y=ax + b$
+ con $a$ e $b$ letti dalla tabella di cui sopra, basta cercare il punto con la $x$ nulla per trovare l'intersezione con gli assi.
+ Con una banale sostituzione otteniamo $f_y= b$ il che ci dà immediatamente un valore reciproco del fuoco che sia anche
+ accompagnato dalla sua incertezza: con una semplice propagazione si trova che l'incertezza su $f_y$ è uguale a quella su $b$,
+ stimata a partire dalle formule di interpolazione che massimizzano la verosimiglianza (anche questo riportato nella tabella).
+ Il primo valore del reciproco del fuoco quindi risulta:
+\[f_y = (0.1505 \pm 0.0003) \cm^{-1}\]
+
+Per quanto riguarda l'intersezione con l'asse delle $x$, stavolta il calcolo è leggermente più complesso, infatti sostituendo $y = 0$
+ alla formula della retta interpolata si ottiene $f_x = -\frac{q}{m}$.  Per trovare l'incertezza a questo punto risulta necessario
+ propagare gli errori su $m$ e su $q$. Applicando la solita formula di propagazione risulta
+\[\sigma_{f_x} = \sqrt {\frac{1} {m^2} \sigma_q^2 + \frac{q}{m^2} \sigma_m^2 + 2 \cov (q,m) }.\] Sostituendo,
+ il reciproco del fuoco ha un valore di:
+\[f_x = (0.153 \pm 0.002) \cm^{-1}\]
+
+Per trovare il fuoco è necessario calcolare i reciproci di $f_x$ ed $f_y$, andando a propagare gli errori secondo la formula di 
+propagazione: $f'_x = \frac{1}{f_x}$ e $\sigma_{f'x} = \frac{\sigma_{fx}}{f_{x}^2}$ ed analogo per $f_y$. Da cui i risultati:
+\[f'_x = (6.55 \pm 0.09) \cm \]
+\[f'_y = (6.64 \pm 0.01) \cm \]
+
+Per dare un risultato finale, si possono includere tutti gli errori nel fatto che questi due numeri sono diversi: si può andare a
+ stimare effettivamente il fuoco $f^{\star}$ facendo una media aritmetica dei valori ottenuti e si può stimare l'incertezza
+ andando a vedere la
+ semidifferenza tra i due valori casuali ottenuti. Il risultato finale è:
+\[f^{\star} = (6.60 \pm 0.04) \cm .\]
+
+Si veda ora come si sarebbero potuti analizzare i dati considerando la retta con l'unico parametro libero l'intercetta. In questo
+ caso il risultato del fuoco, come del resto un'indicazione del suo errore statistico, ci vengono dati dai parametri interpolati e
+ riportati nella tabella 4, per cui la lunghezza focale, calcolata come nel caso precedente trovando il reciproco
+ dell'intercetta e propagando gli errori, sembrerebbe valere:
+\[f = (6.604 \pm 0.009) \cm \]
+Ricordando però che i campioni raccolti per la stima della lunghezza focale attraverso il metodo dei punti coniugati erano due ed
+ erano visibilmente poco compatibili tra loro, sorge spontaneo chiedersi quali siano gli errori sistematici collegati a tale metodo.
+ Dalle formule della legge dei punti coniugati risulta che p dipende dalla posizione iniziale dell'oggetto, che tra
+ l'altro rimane fisso per tutta la durata dell'esperimento (probabilmente è da ricondurre ad una non perfetta lettura della posizione
+ dell'oggetto il fatto che i due campioni non siano sottoinsiemi della stessa popolazione), il che vuol dire che un'errata lettura
+ nella posizione iniziale dell'oggetto può sistematicamente creare un bias nel campione, spostando la retta interpolante dalla
+ posizione che realmente dovrebbe occupare. Per stimare tale errore sistematico sono stati creati dei campioni fittizi di $\usup$ e
+ di $\usuq$ considerando l'oggetto non nella posizione registrata al momento dell'esperimento, ma spostata di una sigma (0.5 mm) da
+ uno dei due lati. I valori ottenuti sono riassunti nella seguene tabella:
+%**02_tab_5.txt**
+\begin{tabella}
+	\centering
+	\input{./tabelle/02_tab_5.tex}
+	\caption{Campioni con errori sistematici $[\cm^{-1}]$}
+	\label{tab:02tab5}
+\end{tabella}
+
+Andando a rappresentare sia il campione reale che i campioni fittizi con le relative rette interpolate risulta:
+%**02_graf_4.txt**	**02_tab_6.txt**
+\begin{grafico} \centering \input{../gnuplot/immagini/02_graph_4.tex} \caption{Errori su Po} \label{gr:02_graph_4.tex} \end{grafico}
+\begin{tabella}
+	\centering
+	\input{./tabelle/02_tab_6.tex}
+	\caption{Rette interpolanti errori sistematici}
+	\label{tab:02tab6}
+\end{tabella}
+Da un confronto delle rette interpolanti si può stimare l'incertezza che può essere collegato all'imprecisione nella lettura della
+ posizione del cavaliere portalampada. In particolare si può leggere l'effettivo valore del fuoco come quello collegato al
+ campione realmente raccolto, e ad esso si può associare un errore sistematico legato alla massima distanza tra i fuochi fittizi
+ ricavati dalle interpolazioni dei campioni fittizi, che risulta di 0.01~cm. Il valore finale risulta, quindi:
+\[f = (6.60 \pm 0.01) \cm\]
+
+Dove è stata considerata la sommma tra gli errori statistici e gli errori sistematici su p\textsubscript{o}, rispetto ai quali gli
+ errori statistici precedentemente considerati risultano trascurabili.
+ Il valore più giusto tra i due, alla luce dell'$\mathcal{F}$-test effettuato e delle considerazioni sugli errori sistematici, è il secondo:
+ infatti la semplicità della retta interpolante a signolo parametro libero permette un più semplice studio degli errori collegati
+ al posizionamento dell'oggetto. Un approccio simile per la ricerca dell'errore sistematico nel caso del doppio parametro libero
+ renderebbe impossibile l'approssimazione dell'errore attraverso le formule sopra citate, rendendo difficoltosa una pratica stima
+ dello stesso. Il valore ottenuto va comunque corretto tramite i coefficienti di aberrazione sferica, come verrà discusso più avanti.

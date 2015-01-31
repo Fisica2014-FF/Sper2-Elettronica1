@@ -1,0 +1,38 @@
+%**04_tab_1**
+
+Per la stima del coefficiente di aberrazione sferica $c$, si \`e considerata la formula
+\[ c=\frac{f \cdot l}{R^2}, \] 
+con \( l = \frac{f_i + f_f}{2} - f_m \) e $f$ miglior stima del fuoco nel giallo dalle precedenti esperienze.
+%fuoco nel giallo mi sembra più corretto --Davide 
+
+Per trovare $l$ si \`e calcolato $l_i$ su ogni terna di valori, propagandone l'errore quadraticamente. Nel calcolo della propagazione di errore si \`e notato che l'errore su $f_m$ è trascurabile rispetto all'errore su $f_p$, infatti risulta da evidenze sperimentali che la profondità di campo dei raggi parassiali \`e molto maggiore di quella dei raggi marginali: è stato più semplice comprendere la posizione del fuoco marginale rispetto a quella del fuoco marginale, per identificare il quale è stato necessario addirittura trovare due valori all'interno del quale il fuoco fosse compreso. Al fuoco prossimale è stato associato, quindi, un errore pari alla semiampiezza dell'intervallo di fuoco dei raggi prossimali, proprio in virt\`u delle difficolt\`a già espresse. Si \`e in seguito fornita una stima di $l$ come media pesata del campione cos\`i creato: %Secondo me presa dati non è il termine migliore. Di presa dati ne abbiamo fatta una sola. Per ogni terna di valori mi sembra più comprensibile, discutiamone! Tra l'altro se ricordi bene abbiamo preso l'errore du f_p come semidifferenza tra f_i ed f_f, e l'errore su f_m come trascurabile rispetto a quello su f_p visto che la profondità di campo era molto maggiore nel caso di f_p rispetto a f_m --Davide
+\[ l = (0.51 \pm 0.03) \cm. \]
+
+%come si chiama 'sta roba di correzione? Perche' sto facendo questa cosa? chi sono? a proposito: \nicefrac {f_f+f_i}{2}, giusto per dire.
+Con tale $l$, si \`e compiuta una prima correzione di aberrazione sferica per ogni $f_j$ ottenuto dalle precedenti esperienze, sommando $l/2$ alla stima stessa e andando a ristimare la sua incertezza. Infatti i risultati presentati nel caso delle prime tre esperienze trovano il fuoco della lente a meno delle correzioni per aberrazione sferica: a causa della costruzione dell'apparato, l'oggetto non è effettivamente puntiforme, ma ha un diametro finito (maggiore di 10 mm) a causa del nostro diaframma. Ciò vuol dire che, analogamente a quanto è stato notato nell'esecuzione di quest'esperimento, i raggi che incidono la lente a distanza maggiore dal centro della stessa convergono prima degli altri. A causa di questo fenomeno irriducibile causato dalle approssimazioni considerate nella creazione del modello, quello che è stato trovato nelle esperienze precedenti non è realmente il fuoco (considerato come punto in cui convergono i punti parassiali) ma è l'inizio della messa a fuoco. Per questo, andando a correggere tale valore, risulta necessario aggiungere $\nicefrac l/2$ per spostarsi dal punto in cui si inizia a vedere il fuoco (che è quello registrato) al punto dove efffettivamente si ritiene più probabile sia il fuoco, e all'incertezza va sommata quadraticamente la stessa quantità per considerare il fatto che non si sa esattamente dove sia il fuoco nell'intervallo che va dal fuoco registrato al fuoco registrato aumentato di $l/2$. Consideriamo dunque f come media pesata di tali valori:
+\[ f = (6.9 \pm 0.2) \cm. \] 
+%Boh qua io amplierei un po'. La correzione è la correzione per aberrazione sferica, mentre la questione dell'errore si può comprendere solo andando ad analizzare perché: a causa dell'aberrazione sferica il nsotro sistema non è più stigmatico, va a trasformare punti (la nostra immagine) in linee, cioè ogni raggio che viene dalla mascherina e incide la lente ad un'altezza differente della lente stessa va a fuoco in un punto diverso, generando la classica situazione per cui tu non vedi "un punto" in cui va a fuoco il sistema, ma vedi una serie di punti durante i quali ti sembra vada sempre a fuoco. Questo perché prima vanno a fuoco quelli che colpiscono la lente più marginalmente (il diaframma ha un diametro di 10 mm e il raggio comunque diverge in quello spazio tra il diaframma e la lente - ndr) e poi vanno a fuoco quelli più parassiali. Per questo il fuoco che è stato trovato nelle esperienze 1,2,3 non è il fuoco reale, ma è il punto in cui "inizia ad andare a fuoco". Per trovare il fuoco reale (quello che avrebbe un raggio con angolo di incidenza che tende a zero) va aumentato il valore della metà della differenza di messa a fuoco dei raggi marginali e di quelli prossimali. L'incertezza, poi, è perché tu non sai esattamente quale sia il fuoco, sai che è in quella zona, così prendi un'incertezza tale che tutta la zona stia a un sigma di distanza. --Davide
+
+Per quanto riguarda $c$, si \`e proceduto creando un nuovo campione per ogni presa dati; la formula di propagazione degli errori fornisce %Aggiungerei che l'errore su R è trascurabile rispetto agli altri errori --Davide
+\[ Var(c_i) =\frac{f^2 \cdot Var(l_i) + l^2 \cdot Var(f)}{R^4}. \]
+Da questo campione si \`e ricavata la media pesata, con relativo errore:
+\[ c = (1.8 \pm 0.1). \]
+
+Come ulteriore stima di $c$, si \`e utilizzata la formula
+\[ c_t = \frac{t \cdot f \cdot (f-l)}{2R^3}, \]
+dove $t$ \`e l'aberrazione sferica trasversale misurata, stimata con una media semplice, potendo considerare l'errore costante:
+\[ t = (0.19 \pm 0.002) \cm.\]
+L'errore di $c_t$ si trova quindi con la propagazione: 
+\[ Var(c_t) = \sqrt{ \frac
+{ (f \cdot (f-1))^2 \cdot Var(t)  +  (t \cdot (2f-1))^2 \cdot Var(f)  +  (t \cdot f)^2 \cdot Var(l)}
+{4R^6},
+}
+\[ c_t = 1.56 \pm 0.08. \]
+%Dobbiamo presentare anche il valore di t e il suo errore, e dare un commentino sul perché i due valori di c sono diversi. Inoltre approfondirei un po' la questione sul t e il suo problema se non siamo esattamente sul fuoco parassiale --Davide
+
+
+
+
+%Media pesata di l = 0.51095cm, con sigma = 0.031146cm.
+%Media pesata di c = 1.79299cm, con sigma = 0.111198cm.
+%t = 0.194286cm, sigmat = cm0.00178101
