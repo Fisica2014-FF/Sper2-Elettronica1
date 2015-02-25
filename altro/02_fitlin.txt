@@ -1,3 +1,4 @@
+#sigma a posteriori sulla y0.551705
 # x medio = 60.4364, Var(x) = 23.297
 # y medio = 170.155, Var(y) = 65.1627
 # Parametri retta:

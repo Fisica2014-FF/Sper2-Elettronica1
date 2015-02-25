@@ -1,7 +1,7 @@
 set terminal png
 set output '02_fitlin.png'
 set title 'Fit lineare'
-set xlabel 'I (mA)'
+set xlabel 'i (mA)'
 set ylabel 'V (mV)'
 ###set xtitle 
 ###set ytitle

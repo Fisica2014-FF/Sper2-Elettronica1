@@ -1,9 +1,10 @@
 set terminal png
 set output '02_residui.png'
-set title 'Grafico dei residui'
-set xlabel 'I (mA)'
+# set title 'Grafico dei residui'
+set xlabel 'i (mA)'
 set ylabel 'V (mV)'
 ###set xtitle 
 ###set ytitle 'Residui'
 
-plot '02_fitlin.txt'
+f(x)=0
+plot '02_fitlin.txt' u ($1):($2):(0.6) w errorbars title "Residui", f(x) title ""

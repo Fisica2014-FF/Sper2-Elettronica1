@@ -1,15 +1,21 @@
-[latexmk -pdf 'nomefile']
+[latexmk -pdf 'nomeRG=file']
 
 Misure dirette
-RV=11.17 +/- 0.13 mOHM
+RV=11.17 +/- 0.13 MOHM
 
 RA(200microA)=1002 +/- 5 OHM
 RA(2mA)=102.1 +/- 0.5
-RA(20mA)=11.4+/-0.6
-RA(200mA)=1.8+/-0.6
-RA(2A)=1.2+/-0.6
+RA(20mA)=11.4 +/- 0.6
+RA(200mA)=1.8 +/- 0.6
+RA(2A)=1.2 +/- 0.6
 
 Misure ricavate
+Resistenza generatore
+RG=0.10 +/- 0.16
+
+Resistenza voltmetro
+[RS=990000 +/- 5200 OHM]
+RV=11.19 +/- 0.08 MOHM
 
 
 

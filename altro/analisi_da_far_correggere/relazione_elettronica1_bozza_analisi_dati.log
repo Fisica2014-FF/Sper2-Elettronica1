@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.12.28)  31 JAN 2015 18:45
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.12.28)  31 JAN 2015 23:51
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1545,7 +1545,7 @@ Package microtype Info: Loading generic settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Try loading font information for T1+AlegreyaSansSC-LF on in
-put line 51.
+put line 54.
 
 (/usr/share/texlive/texmf-dist/tex/latex/alegreya/T1AlegreyaSansSC-LF.fd
 File: T1AlegreyaSansSC-LF.fd 2014/01/10 (autoinst) Font definitions for T1/Aleg
@@ -1556,40 +1556,45 @@ Package microtype Info: Loading generic settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 
-<./img/02_fitlin.png, id=19, 481.8pt x 361.35pt>
-File: ./img/02_fitlin.png Graphic file (type png)
- <use ./img/02_fitlin.png>
-Package pdftex.def Info: ./img/02_fitlin.png used on input line 57.
-(pdftex.def)             Requested size: 363.84044pt x 272.8865pt.
-Package hyperref Info: bookmark level for unknown grafico defaults to 0 on inpu
-t line 58.
-
-<./img/02_residui.png, id=20, 481.8pt x 361.35pt>
-File: ./img/02_residui.png Graphic file (type png)
- <use ./img/02_residui.png>
-Package pdftex.def Info: ./img/02_residui.png used on input line 64.
-(pdftex.def)             Requested size: 363.84044pt x 272.8865pt.
-
-[1
+(./tabelle/01_tab_1.tex)
+Package hyperref Info: bookmark level for unknown tabella defaults to 0 on inpu
+t line 61.
+ [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
 Package microtype Info: Character `029' is missing
 (microtype)             in font `T1/qpl/m/sc/10.95'.
 (microtype)             Ignoring protrusion settings for this character.
- [2 <./img/02_fitlin.png> <./img/02_residui.png>]
-Overfull \hbox (0.74142pt too wide) in paragraph at lines 69--69
+[2] (./tabelle/02_tab_1.tex) <./img/02_fitlin.png, id=42, 481.8pt x 361.35pt>
+File: ./img/02_fitlin.png Graphic file (type png)
+
+<use ./img/02_fitlin.png>
+Package pdftex.def Info: ./img/02_fitlin.png used on input line 120.
+(pdftex.def)             Requested size: 363.84044pt x 272.8865pt.
+Package hyperref Info: bookmark level for unknown grafico defaults to 0 on inpu
+t line 121.
+ <./img/02_residui.png, id=43, 481.8pt x 361.35pt>
+File: ./img/02_residui.png Graphic file (type png)
+
+<use ./img/02_residui.png>
+Package pdftex.def Info: ./img/02_residui.png used on input line 138.
+(pdftex.def)             Requested size: 363.84044pt x 272.8865pt.
+ [3] [4 <./img/02_fitlin.png>] [5 <./img/02_residui.png>]
+Overfull \hbox (0.74142pt too wide) in paragraph at lines 161--161
 |\T1/AlegreyaSansSC-LF/b/n/17.28 III. Re-si-sten-ze in-ter-ne de-gli stru-men-t
 i di mi-su-ra| 
  []
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 71.
-[3
+(./tabelle/03_tab_1.tex)
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 223.
+ [6
 
-]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 71.
- (./relazione_elettronica1_bozza_analisi_dati.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 71.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 71.
+] [7]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 223.
+
+(./relazione_elettronica1_bozza_analisi_dati.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 223.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 223.
 Package rerunfilecheck Info: File `relazione_elettronica1_bozza_analisi_dati.ou
 t' has not changed.
 (rerunfilecheck)             Checksum: 9AE24831EC0206E732E1346F6C5725EE;219.
@@ -1599,26 +1604,34 @@ t' has not changed.
 ### simple group (level 1) entered at line 48 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 23904 strings out of 493304
- 409880 string characters out of 6139870
- 620977 words of memory out of 5000000
- 26771 multiletter control sequences out of 15000+600000
- 82091 words of font info for 62 fonts, out of 8000000 for 9000
+ 24052 strings out of 493304
+ 411449 string characters out of 6139870
+ 629136 words of memory out of 5000000
+ 26818 multiletter control sequences out of 15000+600000
+ 107924 words of font info for 123 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 65i,11n,92p,895b,594s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 65i,12n,92p,895b,594s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/tex-gyre/q-ec.enc}{/usr/share
-/texlive/texmf-dist/fonts/enc/dvips/alegreya/algrs_rus6f4.enc}{/usr/share/texli
-ve/texmf-dist/fonts/enc/dvips/anonymouspro/AnonymousPro-01.enc}{/usr/share/texm
-f/fonts/enc/dvips/tex-gyre/q-ec-sc.enc}</usr/share/texlive/texmf-dist/fonts/typ
-e1/huerta/alegreya/AlegreyaSansSC-Bold.pfb></usr/share/texlive/texmf-dist/fonts
-/type1/public/anonymouspro/AnonymousPro-Regular.pfb></usr/share/texmf/fonts/typ
-e1/public/tex-gyre/qplb.pfb></usr/share/texmf/fonts/type1/public/tex-gyre/qplr.
-pfb></usr/share/texmf/fonts/type1/public/tex-gyre/qplri.pfb>
-Output written on relazione_elettronica1_bozza_analisi_dati.pdf (3 pages, 91328
- bytes).
+/texmf/fonts/enc/dvips/tex-gyre/q-rm.enc}{/usr/share/texlive/texmf-dist/fonts/e
+nc/dvips/alegreya/algrs_rus6f4.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvi
+ps/anonymouspro/AnonymousPro-01.enc}{/usr/share/texmf/fonts/enc/dvips/tex-gyre/
+q-ec-sc.enc}</usr/share/texlive/texmf-dist/fonts/type1/huerta/alegreya/Alegreya
+SansSC-Bold.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/anonymouspro/
+AnonymousPro-Regular.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/euler/e
+ufm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/euler/eufm
+7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/euler/eurm10.p
+fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/euler/eurm7.pfb><
+/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/euler/eusm7.pfb></usr
+/share/texmf/fonts/type1/public/tex-gyre/qplb.pfb></usr/share/texmf/fonts/type1
+/public/tex-gyre/qplr.pfb></usr/share/texmf/fonts/type1/public/tex-gyre/qplri.p
+fb>
+Output written on relazione_elettronica1_bozza_analisi_dati.pdf (7 pages, 14680
+7 bytes).
 PDF statistics:
- 71 PDF objects out of 1000 (max. 8388607)
- 56 compressed objects within 1 object stream
- 9 named destinations out of 1000 (max. 500000)
- 16943 words of extra memory for PDF output out of 17280 (max. 10000000)
+ 132 PDF objects out of 1000 (max. 8388607)
+ 105 compressed objects within 2 object streams
+ 22 named destinations out of 1000 (max. 500000)
+ 24623 words of extra memory for PDF output out of 24883 (max. 10000000)
 
