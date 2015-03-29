@@ -1,0 +1,10 @@
+\select@language {italian}
+\select@language {italian}
+\contentsline {section}{\numberline {I}Circuiti}{2}{section.1}
+\contentsline {section}{\numberline {II}Analisi dei dati}{4}{section.2}
+\contentsline {subsection}{\numberline {I}Misure dirette di resistenze}{4}{subsection.2.1}
+\contentsline {subsection}{\numberline {II}Misura voltamperometrica di una resistenza}{5}{subsection.2.2}
+\contentsline {subsection}{\numberline {III}Resistenze interne degli strumenti di misura}{9}{subsection.2.3}
+\contentsline {section}{\numberline {III}Appendice: calcolo degli errori}{10}{section.3}
+\contentsline {section}{\numberline {IV}Conclusioni}{10}{section.4}
+\contentsline {section}{\numberline {V}Codice}{11}{section.5}
