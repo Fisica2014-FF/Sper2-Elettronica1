@@ -10,8 +10,17 @@ set ylabel 'V (mV)'
 #fit f(x) '02_dati_01.txt' via q,m
 #plot f(x), '02_dati_01.txt' 
 
-f(x) = q + m * x
-q=1.11651
-m=2.79696
-plot f(x), '02_dati_01.txt' 
+set xrange [20:120]
 
+f(x) = q + m * x
+q=0.592582
+m=2.80385
+plot f(x) lt rgb '#FF0101', '02_dati_01.txt' lt rgb '#0000CC'
+
+
+
+set terminal tikz
+
+set output "02_fitlin.tex" 
+
+replot

@@ -11,7 +11,7 @@ struct line
 	};
 	
 int main (){
-	int N = 11;
+	int N = 10;
 	double * x = new double [N];
 	double * y = new double [N];
 	
@@ -28,7 +28,7 @@ int main (){
 	ret.sm = interp_sigmab(N, x, y);
 		
 	cout <<
-	    "#sigma a posteriori sulla y" << sigmay_post(N, x, y) << endl <<
+	    "#sigma a posteriori sulla y: " << sigmay_post(N, x, y) << endl <<
 		"# x medio = " << media(N, x) << ", Var(x) = " << scarto2(N, x) << endl <<
 		"# y medio = " << media(N, y) << ", Var(y) = " << scarto2(N, y) << endl;
 	

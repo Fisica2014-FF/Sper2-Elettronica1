@@ -1,0 +1,18 @@
+ % sotto allo SigmaV=0.6 (milli?)Volt
+ Questo valore è stato calcolato direttamente dai dati con la formula\footnote{1
+ M. Loreti, \itshape{Teoria degli Errori e Fondamenti di Statistica}, p. 666
+}
+\begin{equation}
+ \sigma_V = \frac{\sum_i^N \left(y_i-(m x_i+q)^2 \right)}{N-2}.
+\end{equation}
+Risulta un po' alto, ma si vede anche dal grafico \autoref{fig:residui} come un
+valore minore di $\sigma_V$ implicherebbe che la maggior parte dei dati sarebbe a più
+di una sigma dallo zero.
+
+\begin{figure}[0.7\textwidth]
+ \centering 
+ \input{../gnuplot/immagini/02_graph_4.tex} 
+ \caption{Grafico 02_graph_4.tex} 
+ \label{gr:02_graph_4.tex}
+\end{figure}
+ 

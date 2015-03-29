@@ -1,0 +1,11 @@
+set terminal png
+set output '02_congnuplot_fitlin.png'
+set title 'Fit lineare'
+set xlabel 'i (mA)'
+set ylabel 'V (mV)'
+###set xtitle 
+###set ytitle
+
+f(x) = q +m*x
+fit f(x) '02_dati_01.txt' via q,m
+plot f(x), '02_dati_01.txt' 

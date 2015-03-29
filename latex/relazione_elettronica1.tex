@@ -10,7 +10,7 @@
 \DeclareGraphicsExtensions{.pdf, .png, .jpg} % Se due immagini hanno lo stesso nome sceglile secondo l'ordine di filetype qui
 \graphicspath{ {./img/} }					 % Path delle immagini 
 
-\input{./preamboli_e_stili/titolo_ottica_geometrica.tex}
+\input{./preamboli_e_stili/titolo_elettronica1.tex}
 \input{./preamboli_e_stili/stili_float.tex}
 
 
@@ -19,7 +19,7 @@
 % Fine dei dati iniziali per il latex: il documento finale inizierà da qui
 \begin{document}
 
-\includepdf[pages={1}]{./img/copertina_relazione.pdf}
+%\includepdf[pages={1}]{./img/copertina_relazione.pdf}
 
 {
 %\color{grigio-molto-scuro}
@@ -53,16 +53,16 @@
 
 %\begin{multicols}{2}
 
-\section{Apparato strumentale}
-	\input{./sezioni/descrizione_app_strumentale.tex}
+% \section{Apparato strumentale}
+% 	\input{./sezioni/descrizione_app_strumentale.tex}
 
-\section{Metodologia di misura}
-	\input{./sezioni/metodologia_misura.tex}
+% \section{Metodologia di misura}
+% 	\input{./sezioni/metodologia_misura.tex}
 
 %\newpage
 %\end{multicols}
-\section{Presentazione dei dati}
-	\input{./sezioni/parti_esperimento.tex}
+% \section{Presentazione dei dati}
+ 	\input{./sezioni/parti_esperimento.tex}
 	%\subsection{Tabelle}
 	%\begin{multicols}{2}
 	%\input{./sezioni/pres_dati_tabelle.tex}
@@ -73,13 +73,17 @@
 
 %\clearpage
 %\begin{multicols}{2}
-%\section{Analisi dei dati}
-%	\input{./sezioni/analisi.tex}
+\section{Analisi dei dati}
+	\input{./sezioni/analisi.tex}
 
+\section{Appendice: calcolo degli errori}
+	\input{./sezioni/appendice.tex}
+	
 \section{Conclusioni}
 	\input{./sezioni/conclusioni.tex}
 	
 	%\end{multicols}
+\newpage
 \section{Codice}
 } 	%Fine del grigio e di lsstyle
 
